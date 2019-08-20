@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.accp.pojo.Deliveryspot" table="deliveryspot" schema="logistics">
+        <id name="deliveryspotid" column="DELIVERYSPOTID"/>
+        <property name="deliveryspotno" column="DELIVERYSPOTNO"/>
+        <property name="dname" column="DNAME"/>
+        <property name="provinceid" column="PROVINCEID"/>
+        <property name="cityid" column="CITYID"/>
+        <property name="empid" column="EMPID"/>
+        <property name="tel" column="TEL"/>
+        <property name="startscope" column="STARTSCOPE"/>
+        <property name="startprice" column="STARTPRICE"/>
+        <property name="secondprice" column="SECONDPRICE"/>
+        <property name="flag" column="FLAG"/>
+        <property name="startvolumescope" column="STARTVOLUMESCOPE"/>
+        <property name="startvolumeprice" column="STARTVOLUMEPRICE"/>
+        <property name="secondvdlumeprice" column="SECONDVDLUMEPRICE"/>
+    </class>
+</hibernate-mapping>
