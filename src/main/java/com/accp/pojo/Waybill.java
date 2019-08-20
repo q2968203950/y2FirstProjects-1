@@ -1,9 +1,5 @@
 package com.accp.pojo;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
 import java.math.BigDecimal;
 import java.sql.Date;
 import java.util.Objects;
@@ -14,7 +10,6 @@ import java.util.Objects;
  * @author: hjn
  * @create: 2019-08-20 15:22
  **/
-@Entity
 public class Waybill {
     private int id;
     private int orderid;
@@ -27,8 +22,6 @@ public class Waybill {
     private Date createtime;
     private int deliveryspotid;
 
-    @Id
-    @Column(name = "id")
     public int getId() {
         return id;
     }
@@ -37,8 +30,6 @@ public class Waybill {
         this.id = id;
     }
 
-    @Basic
-    @Column(name = "ORDERID")
     public int getOrderid() {
         return orderid;
     }
@@ -47,8 +38,6 @@ public class Waybill {
         this.orderid = orderid;
     }
 
-    @Basic
-    @Column(name = "TOTALPRICE")
     public BigDecimal getTotalprice() {
         return totalprice;
     }
@@ -57,8 +46,6 @@ public class Waybill {
         this.totalprice = totalprice;
     }
 
-    @Basic
-    @Column(name = "INSUREPRICE")
     public BigDecimal getInsureprice() {
         return insureprice;
     }
@@ -67,8 +54,6 @@ public class Waybill {
         this.insureprice = insureprice;
     }
 
-    @Basic
-    @Column(name = "GOODSPRICE")
     public BigDecimal getGoodsprice() {
         return goodsprice;
     }
@@ -77,8 +62,6 @@ public class Waybill {
         this.goodsprice = goodsprice;
     }
 
-    @Basic
-    @Column(name = "VOLUME")
     public BigDecimal getVolume() {
         return volume;
     }
@@ -87,8 +70,6 @@ public class Waybill {
         this.volume = volume;
     }
 
-    @Basic
-    @Column(name = "WEIGHT")
     public BigDecimal getWeight() {
         return weight;
     }
@@ -97,8 +78,6 @@ public class Waybill {
         this.weight = weight;
     }
 
-    @Basic
-    @Column(name = "REMARK")
     public String getRemark() {
         return remark;
     }
@@ -107,8 +86,6 @@ public class Waybill {
         this.remark = remark;
     }
 
-    @Basic
-    @Column(name = "CREATETIME")
     public Date getCreatetime() {
         return createtime;
     }
@@ -117,8 +94,6 @@ public class Waybill {
         this.createtime = createtime;
     }
 
-    @Basic
-    @Column(name = "DELIVERYSPOTID")
     public int getDeliveryspotid() {
         return deliveryspotid;
     }

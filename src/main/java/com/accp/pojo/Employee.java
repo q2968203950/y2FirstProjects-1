@@ -1,9 +1,5 @@
 package com.accp.pojo;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
 import java.math.BigDecimal;
 import java.sql.Date;
 import java.util.Objects;
@@ -14,7 +10,6 @@ import java.util.Objects;
  * @author: hjn
  * @create: 2019-08-20 15:22
  **/
-@Entity
 public class Employee {
     private int empid;
     private String empno;
@@ -31,8 +26,6 @@ public class Employee {
     private int deliveryspotid;
     private int flag;
 
-    @Id
-    @Column(name = "EMPID")
     public int getEmpid() {
         return empid;
     }
@@ -41,8 +34,6 @@ public class Employee {
         this.empid = empid;
     }
 
-    @Basic
-    @Column(name = "EMPNO")
     public String getEmpno() {
         return empno;
     }
@@ -51,8 +42,6 @@ public class Employee {
         this.empno = empno;
     }
 
-    @Basic
-    @Column(name = "ENAME")
     public String getEname() {
         return ename;
     }
@@ -61,8 +50,6 @@ public class Employee {
         this.ename = ename;
     }
 
-    @Basic
-    @Column(name = "GENOER")
     public int getGenoer() {
         return genoer;
     }
@@ -71,8 +58,6 @@ public class Employee {
         this.genoer = genoer;
     }
 
-    @Basic
-    @Column(name = "BIRTHDAY")
     public Date getBirthday() {
         return birthday;
     }
@@ -81,8 +66,6 @@ public class Employee {
         this.birthday = birthday;
     }
 
-    @Basic
-    @Column(name = "ADDRESS")
     public String getAddress() {
         return address;
     }
@@ -91,8 +74,6 @@ public class Employee {
         this.address = address;
     }
 
-    @Basic
-    @Column(name = "TEL")
     public String getTel() {
         return tel;
     }
@@ -101,8 +82,6 @@ public class Employee {
         this.tel = tel;
     }
 
-    @Basic
-    @Column(name = "STARTWORDTIME")
     public Date getStartwordtime() {
         return startwordtime;
     }
@@ -111,8 +90,6 @@ public class Employee {
         this.startwordtime = startwordtime;
     }
 
-    @Basic
-    @Column(name = "SALARY")
     public BigDecimal getSalary() {
         return salary;
     }
@@ -121,8 +98,6 @@ public class Employee {
         this.salary = salary;
     }
 
-    @Basic
-    @Column(name = "EMAIL")
     public String getEmail() {
         return email;
     }
@@ -131,8 +106,6 @@ public class Employee {
         this.email = email;
     }
 
-    @Basic
-    @Column(name = "CARDID")
     public String getCardid() {
         return cardid;
     }
@@ -141,8 +114,6 @@ public class Employee {
         this.cardid = cardid;
     }
 
-    @Basic
-    @Column(name = "PSOITIONID")
     public int getPsoitionid() {
         return psoitionid;
     }
@@ -151,8 +122,6 @@ public class Employee {
         this.psoitionid = psoitionid;
     }
 
-    @Basic
-    @Column(name = "DELIVERYSPOTID")
     public int getDeliveryspotid() {
         return deliveryspotid;
     }
@@ -161,8 +130,6 @@ public class Employee {
         this.deliveryspotid = deliveryspotid;
     }
 
-    @Basic
-    @Column(name = "FLAG")
     public int getFlag() {
         return flag;
     }
