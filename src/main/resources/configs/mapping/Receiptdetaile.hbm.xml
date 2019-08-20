@@ -5,8 +5,14 @@
 <hibernate-mapping package="com.accp.pojo" auto-import="true">
 
     <class name="Receiptdetaile" table="receiptdetaile">
-        <id name="rdid" column="RDID"/>
-        <property name="receiptid" column="RECEIPTID"/>
-        <property name="orderid" column="ORDERID"/>
+        <id name="rdid">
+            <column name="RDID" sql-type="int(11)"/>
+        </id>
+        <property name="receiptid">
+            <column name="RECEIPTID" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="orderid">
+            <column name="ORDERID" sql-type="int(11)" not-null="true"/>
+        </property>
     </class>
 </hibernate-mapping>

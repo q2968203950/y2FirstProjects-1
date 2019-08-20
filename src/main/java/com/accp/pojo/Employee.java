@@ -2,14 +2,7 @@ package com.accp.pojo;
 
 import java.math.BigDecimal;
 import java.sql.Date;
-import java.util.Objects;
 
-/**
- * @program: y2FirstProjects
- * @description: Employee
- * @author: hjn
- * @create: 2019-08-20 15:22
- **/
 public class Employee {
     private int empid;
     private String empno;
@@ -142,25 +135,44 @@ public class Employee {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
+
         Employee employee = (Employee) o;
-        return empid == employee.empid &&
-                genoer == employee.genoer &&
-                psoitionid == employee.psoitionid &&
-                deliveryspotid == employee.deliveryspotid &&
-                flag == employee.flag &&
-                Objects.equals(empno, employee.empno) &&
-                Objects.equals(ename, employee.ename) &&
-                Objects.equals(birthday, employee.birthday) &&
-                Objects.equals(address, employee.address) &&
-                Objects.equals(tel, employee.tel) &&
-                Objects.equals(startwordtime, employee.startwordtime) &&
-                Objects.equals(salary, employee.salary) &&
-                Objects.equals(email, employee.email) &&
-                Objects.equals(cardid, employee.cardid);
+
+        if (empid != employee.empid) return false;
+        if (genoer != employee.genoer) return false;
+        if (psoitionid != employee.psoitionid) return false;
+        if (deliveryspotid != employee.deliveryspotid) return false;
+        if (flag != employee.flag) return false;
+        if (empno != null ? !empno.equals(employee.empno) : employee.empno != null) return false;
+        if (ename != null ? !ename.equals(employee.ename) : employee.ename != null) return false;
+        if (birthday != null ? !birthday.equals(employee.birthday) : employee.birthday != null) return false;
+        if (address != null ? !address.equals(employee.address) : employee.address != null) return false;
+        if (tel != null ? !tel.equals(employee.tel) : employee.tel != null) return false;
+        if (startwordtime != null ? !startwordtime.equals(employee.startwordtime) : employee.startwordtime != null)
+            return false;
+        if (salary != null ? !salary.equals(employee.salary) : employee.salary != null) return false;
+        if (email != null ? !email.equals(employee.email) : employee.email != null) return false;
+        if (cardid != null ? !cardid.equals(employee.cardid) : employee.cardid != null) return false;
+
+        return true;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(empid, empno, ename, genoer, birthday, address, tel, startwordtime, salary, email, cardid, psoitionid, deliveryspotid, flag);
+        int result = empid;
+        result = 31 * result + (empno != null ? empno.hashCode() : 0);
+        result = 31 * result + (ename != null ? ename.hashCode() : 0);
+        result = 31 * result + genoer;
+        result = 31 * result + (birthday != null ? birthday.hashCode() : 0);
+        result = 31 * result + (address != null ? address.hashCode() : 0);
+        result = 31 * result + (tel != null ? tel.hashCode() : 0);
+        result = 31 * result + (startwordtime != null ? startwordtime.hashCode() : 0);
+        result = 31 * result + (salary != null ? salary.hashCode() : 0);
+        result = 31 * result + (email != null ? email.hashCode() : 0);
+        result = 31 * result + (cardid != null ? cardid.hashCode() : 0);
+        result = 31 * result + psoitionid;
+        result = 31 * result + deliveryspotid;
+        result = 31 * result + flag;
+        return result;
     }
 }

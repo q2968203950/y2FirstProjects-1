@@ -5,18 +5,44 @@
 <hibernate-mapping package="com.accp.pojo" auto-import="true">
 
     <class name="Orders" table="orders">
-        <id name="orderid" column="ORDERID"/>
-        <property name="orderno" column="ORDERNO"/>
-        <property name="sendname" column="SENDNAME"/>
-        <property name="sendaddress" column="SENDADDRESS"/>
-        <property name="sendtel" column="SENDTEL"/>
-        <property name="sendmobtle" column="SENDMOBTLE"/>
-        <property name="sendpostcode" column="SENDPOSTCODE"/>
-        <property name="receivename" column="RECEIVENAME"/>
-        <property name="receiveaddress" column="RECEIVEADDRESS"/>
-        <property name="receivetel" column="RECEIVETEL"/>
-        <property name="receivemodile" column="RECEIVEMODILE"/>
-        <property name="receivepostcode" column="RECEIVEPOSTCODE"/>
-        <property name="orderstateid" column="ORDERSTATEID"/>
+        <id name="orderid">
+            <column name="ORDERID" sql-type="int(11)"/>
+        </id>
+        <property name="orderno">
+            <column name="ORDERNO" sql-type="varchar(50)" length="50"/>
+        </property>
+        <property name="sendname">
+            <column name="SENDNAME" sql-type="varchar(20)" length="20"/>
+        </property>
+        <property name="sendaddress">
+            <column name="SENDADDRESS" sql-type="varchar(100)" length="100"/>
+        </property>
+        <property name="sendtel">
+            <column name="SENDTEL" sql-type="varchar(20)" length="20"/>
+        </property>
+        <property name="sendmobtle">
+            <column name="SENDMOBTLE" sql-type="varchar(20)" length="20"/>
+        </property>
+        <property name="sendpostcode">
+            <column name="SENDPOSTCODE" sql-type="varchar(20)" length="20"/>
+        </property>
+        <property name="receivename">
+            <column name="RECEIVENAME" sql-type="varchar(20)" length="20"/>
+        </property>
+        <property name="receiveaddress">
+            <column name="RECEIVEADDRESS" sql-type="varchar(100)" length="100"/>
+        </property>
+        <property name="receivetel">
+            <column name="RECEIVETEL" sql-type="varchar(20)" length="20"/>
+        </property>
+        <property name="receivemodile">
+            <column name="RECEIVEMODILE" sql-type="varchar(20)" length="20"/>
+        </property>
+        <property name="receivepostcode">
+            <column name="RECEIVEPOSTCODE" sql-type="varchar(20)" length="20"/>
+        </property>
+        <property name="orderstateid">
+            <column name="ORDERSTATEID" sql-type="int(11)"/>
+        </property>
     </class>
 </hibernate-mapping>

@@ -1,13 +1,6 @@
 package com.accp.pojo;
 
-import java.util.Objects;
 
-/**
- * @program: y2FirstProjects
- * @description: Cartype
- * @author: hjn
- * @create: 2019-08-20 15:22
- **/
 public class Cartype {
     private int cartypeid;
     private String tname;
@@ -32,13 +25,19 @@ public class Cartype {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
+
         Cartype cartype = (Cartype) o;
-        return cartypeid == cartype.cartypeid &&
-                Objects.equals(tname, cartype.tname);
+
+        if (cartypeid != cartype.cartypeid) return false;
+        if (tname != null ? !tname.equals(cartype.tname) : cartype.tname != null) return false;
+
+        return true;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(cartypeid, tname);
+        int result = cartypeid;
+        result = 31 * result + (tname != null ? tname.hashCode() : 0);
+        return result;
     }
 }

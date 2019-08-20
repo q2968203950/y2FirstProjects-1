@@ -1,14 +1,7 @@
 package com.accp.pojo;
 
 import java.math.BigDecimal;
-import java.util.Objects;
 
-/**
- * @program: y2FirstProjects
- * @description: Deliveryspot
- * @author: hjn
- * @create: 2019-08-20 15:22
- **/
 public class Deliveryspot {
     private int deliveryspotid;
     private String deliveryspotno;
@@ -141,25 +134,47 @@ public class Deliveryspot {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
+
         Deliveryspot that = (Deliveryspot) o;
-        return deliveryspotid == that.deliveryspotid &&
-                provinceid == that.provinceid &&
-                cityid == that.cityid &&
-                empid == that.empid &&
-                flag == that.flag &&
-                Objects.equals(deliveryspotno, that.deliveryspotno) &&
-                Objects.equals(dname, that.dname) &&
-                Objects.equals(tel, that.tel) &&
-                Objects.equals(startscope, that.startscope) &&
-                Objects.equals(startprice, that.startprice) &&
-                Objects.equals(secondprice, that.secondprice) &&
-                Objects.equals(startvolumescope, that.startvolumescope) &&
-                Objects.equals(startvolumeprice, that.startvolumeprice) &&
-                Objects.equals(secondvdlumeprice, that.secondvdlumeprice);
+
+        if (deliveryspotid != that.deliveryspotid) return false;
+        if (provinceid != that.provinceid) return false;
+        if (cityid != that.cityid) return false;
+        if (empid != that.empid) return false;
+        if (flag != that.flag) return false;
+        if (deliveryspotno != null ? !deliveryspotno.equals(that.deliveryspotno) : that.deliveryspotno != null)
+            return false;
+        if (dname != null ? !dname.equals(that.dname) : that.dname != null) return false;
+        if (tel != null ? !tel.equals(that.tel) : that.tel != null) return false;
+        if (startscope != null ? !startscope.equals(that.startscope) : that.startscope != null) return false;
+        if (startprice != null ? !startprice.equals(that.startprice) : that.startprice != null) return false;
+        if (secondprice != null ? !secondprice.equals(that.secondprice) : that.secondprice != null) return false;
+        if (startvolumescope != null ? !startvolumescope.equals(that.startvolumescope) : that.startvolumescope != null)
+            return false;
+        if (startvolumeprice != null ? !startvolumeprice.equals(that.startvolumeprice) : that.startvolumeprice != null)
+            return false;
+        if (secondvdlumeprice != null ? !secondvdlumeprice.equals(that.secondvdlumeprice) : that.secondvdlumeprice != null)
+            return false;
+
+        return true;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(deliveryspotid, deliveryspotno, dname, provinceid, cityid, empid, tel, startscope, startprice, secondprice, flag, startvolumescope, startvolumeprice, secondvdlumeprice);
+        int result = deliveryspotid;
+        result = 31 * result + (deliveryspotno != null ? deliveryspotno.hashCode() : 0);
+        result = 31 * result + (dname != null ? dname.hashCode() : 0);
+        result = 31 * result + provinceid;
+        result = 31 * result + cityid;
+        result = 31 * result + empid;
+        result = 31 * result + (tel != null ? tel.hashCode() : 0);
+        result = 31 * result + (startscope != null ? startscope.hashCode() : 0);
+        result = 31 * result + (startprice != null ? startprice.hashCode() : 0);
+        result = 31 * result + (secondprice != null ? secondprice.hashCode() : 0);
+        result = 31 * result + flag;
+        result = 31 * result + (startvolumescope != null ? startvolumescope.hashCode() : 0);
+        result = 31 * result + (startvolumeprice != null ? startvolumeprice.hashCode() : 0);
+        result = 31 * result + (secondvdlumeprice != null ? secondvdlumeprice.hashCode() : 0);
+        return result;
     }
 }
