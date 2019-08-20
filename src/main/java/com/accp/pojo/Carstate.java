@@ -2,6 +2,12 @@ package com.accp.pojo;
 
 import java.util.Objects;
 
+/**
+ * @program: y2FirstProjects
+ * @description: Carstate
+ * @author: hjn
+ * @create: 2019-08-20 15:22
+ **/
 public class Carstate {
     private int carstateid;
     private String cname;
