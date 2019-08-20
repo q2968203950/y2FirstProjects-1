@@ -1,13 +1,6 @@
 package com.accp.pojo;
 
-import java.util.Objects;
 
-/**
- * @program: y2FirstProjects
- * @description: Linetaile
- * @author: hjn
- * @create: 2019-08-20 15:22
- **/
 public class Linetaile {
     private int linedetaileid;
     private int lineid;
@@ -50,15 +43,23 @@ public class Linetaile {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
+
         Linetaile linetaile = (Linetaile) o;
-        return linedetaileid == linetaile.linedetaileid &&
-                lineid == linetaile.lineid &&
-                deliveryspotid == linetaile.deliveryspotid &&
-                lineindex == linetaile.lineindex;
+
+        if (linedetaileid != linetaile.linedetaileid) return false;
+        if (lineid != linetaile.lineid) return false;
+        if (deliveryspotid != linetaile.deliveryspotid) return false;
+        if (lineindex != linetaile.lineindex) return false;
+
+        return true;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(linedetaileid, lineid, deliveryspotid, lineindex);
+        int result = linedetaileid;
+        result = 31 * result + lineid;
+        result = 31 * result + deliveryspotid;
+        result = 31 * result + lineindex;
+        return result;
     }
 }

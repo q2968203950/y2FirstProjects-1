@@ -5,7 +5,11 @@
 <hibernate-mapping package="com.accp.pojo" auto-import="true">
 
     <class name="Power" table="power">
-        <id name="powerid" column="POWERID"/>
-        <property name="pname" column="PNAME"/>
+        <id name="powerid">
+            <column name="POWERID" sql-type="int(11)"/>
+        </id>
+        <property name="pname">
+            <column name="PNAME" sql-type="varchar(20)" length="20"/>
+        </property>
     </class>
 </hibernate-mapping>

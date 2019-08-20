@@ -1,13 +1,6 @@
 package com.accp.pojo;
 
-import java.util.Objects;
 
-/**
- * @program: y2FirstProjects
- * @description: Receipt
- * @author: hjn
- * @create: 2019-08-20 15:22
- **/
 public class Receipt {
     private int receiptid;
     private String carno;
@@ -95,20 +88,34 @@ public class Receipt {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
+
         Receipt receipt = (Receipt) o;
-        return receiptid == receipt.receiptid &&
-                Objects.equals(carno, receipt.carno) &&
-                Objects.equals(deliveryspotid, receipt.deliveryspotid) &&
-                Objects.equals(empid, receipt.empid) &&
-                Objects.equals(createtime, receipt.createtime) &&
-                Objects.equals(remark, receipt.remark) &&
-                Objects.equals(flag, receipt.flag) &&
-                Objects.equals(toname, receipt.toname) &&
-                Objects.equals(ptyoe, receipt.ptyoe);
+
+        if (receiptid != receipt.receiptid) return false;
+        if (carno != null ? !carno.equals(receipt.carno) : receipt.carno != null) return false;
+        if (deliveryspotid != null ? !deliveryspotid.equals(receipt.deliveryspotid) : receipt.deliveryspotid != null)
+            return false;
+        if (empid != null ? !empid.equals(receipt.empid) : receipt.empid != null) return false;
+        if (createtime != null ? !createtime.equals(receipt.createtime) : receipt.createtime != null) return false;
+        if (remark != null ? !remark.equals(receipt.remark) : receipt.remark != null) return false;
+        if (flag != null ? !flag.equals(receipt.flag) : receipt.flag != null) return false;
+        if (toname != null ? !toname.equals(receipt.toname) : receipt.toname != null) return false;
+        if (ptyoe != null ? !ptyoe.equals(receipt.ptyoe) : receipt.ptyoe != null) return false;
+
+        return true;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(receiptid, carno, deliveryspotid, empid, createtime, remark, flag, toname, ptyoe);
+        int result = receiptid;
+        result = 31 * result + (carno != null ? carno.hashCode() : 0);
+        result = 31 * result + (deliveryspotid != null ? deliveryspotid.hashCode() : 0);
+        result = 31 * result + (empid != null ? empid.hashCode() : 0);
+        result = 31 * result + (createtime != null ? createtime.hashCode() : 0);
+        result = 31 * result + (remark != null ? remark.hashCode() : 0);
+        result = 31 * result + (flag != null ? flag.hashCode() : 0);
+        result = 31 * result + (toname != null ? toname.hashCode() : 0);
+        result = 31 * result + (ptyoe != null ? ptyoe.hashCode() : 0);
+        return result;
     }
 }

@@ -5,17 +5,41 @@
 <hibernate-mapping package="com.accp.pojo" auto-import="true">
 
     <class name="Car" table="car">
-        <id name="carid" column="CARID"/>
-        <property name="carno" column="CARNO"/>
-        <property name="workno" column="WORKNO"/>
-        <property name="cartypeid" column="CARTYPEID"/>
-        <property name="carsize" column="CARSIZE"/>
-        <property name="tonnage" column="TONNAGE"/>
-        <property name="buytime" column="BUYTIME"/>
-        <property name="leavetime" column="LEAVETIME"/>
-        <property name="carstateid" column="CARSTATEID"/>
-        <property name="lineid" column="LINEID"/>
-        <property name="empid" column="EMPID"/>
-        <property name="remark" column="REMARK"/>
+        <id name="carid">
+            <column name="CARID" sql-type="int(11)"/>
+        </id>
+        <property name="carno">
+            <column name="CARNO" sql-type="varchar(20)" length="20"/>
+        </property>
+        <property name="workno">
+            <column name="WORKNO" sql-type="varchar(20)" length="20"/>
+        </property>
+        <property name="cartypeid">
+            <column name="CARTYPEID" sql-type="int(11)"/>
+        </property>
+        <property name="carsize">
+            <column name="CARSIZE" sql-type="int(11)"/>
+        </property>
+        <property name="tonnage">
+            <column name="TONNAGE" sql-type="int(11)"/>
+        </property>
+        <property name="buytime">
+            <column name="BUYTIME" sql-type="date"/>
+        </property>
+        <property name="leavetime">
+            <column name="LEAVETIME" sql-type="date"/>
+        </property>
+        <property name="carstateid">
+            <column name="CARSTATEID" sql-type="int(11)"/>
+        </property>
+        <property name="lineid">
+            <column name="LINEID" sql-type="int(11)"/>
+        </property>
+        <property name="empid">
+            <column name="EMPID" sql-type="int(11)"/>
+        </property>
+        <property name="remark">
+            <column name="REMARK" sql-type="varchar(500)" length="500"/>
+        </property>
     </class>
 </hibernate-mapping>
