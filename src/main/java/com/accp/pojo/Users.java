@@ -1,9 +1,5 @@
 package com.accp.pojo;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
 import java.util.Objects;
 
 /**
@@ -12,7 +8,6 @@ import java.util.Objects;
  * @author: hjn
  * @create: 2019-08-20 15:22
  **/
-@Entity
 public class Users {
     private int userid;
     private String username;
@@ -21,8 +16,6 @@ public class Users {
     private Integer deliveryspotid;
     private int empid;
 
-    @Id
-    @Column(name = "USERID")
     public int getUserid() {
         return userid;
     }
@@ -31,8 +24,6 @@ public class Users {
         this.userid = userid;
     }
 
-    @Basic
-    @Column(name = "USERNAME")
     public String getUsername() {
         return username;
     }
@@ -41,8 +32,6 @@ public class Users {
         this.username = username;
     }
 
-    @Basic
-    @Column(name = "PASSOWRD")
     public String getPassowrd() {
         return passowrd;
     }
@@ -51,8 +40,6 @@ public class Users {
         this.passowrd = passowrd;
     }
 
-    @Basic
-    @Column(name = "POWERID")
     public Integer getPowerid() {
         return powerid;
     }
@@ -61,8 +48,6 @@ public class Users {
         this.powerid = powerid;
     }
 
-    @Basic
-    @Column(name = "DELIVERYSPOTID")
     public Integer getDeliveryspotid() {
         return deliveryspotid;
     }
@@ -71,8 +56,6 @@ public class Users {
         this.deliveryspotid = deliveryspotid;
     }
 
-    @Basic
-    @Column(name = "EMPID")
     public int getEmpid() {
         return empid;
     }

@@ -2,9 +2,9 @@
 <!DOCTYPE hibernate-mapping PUBLIC
     "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<hibernate-mapping>
+<hibernate-mapping package="com.accp.pojo" auto-import="true">
 
-    <class name="com.accp.pojo.Line" table="line" schema="logistics">
+    <class name="Line" table="line">
         <id name="lineid" column="LINEID"/>
         <property name="lineno" column="LINENO"/>
         <property name="linename" column="LINENAME"/>
