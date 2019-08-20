@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.accp.pojo.Car" table="car" schema="logistics">
+        <id name="carid" column="CARID"/>
+        <property name="carno" column="CARNO"/>
+        <property name="workno" column="WORKNO"/>
+        <property name="cartypeid" column="CARTYPEID"/>
+        <property name="carsize" column="CARSIZE"/>
+        <property name="tonnage" column="TONNAGE"/>
+        <property name="buytime" column="BUYTIME"/>
+        <property name="leavetime" column="LEAVETIME"/>
+        <property name="carstateid" column="CARSTATEID"/>
+        <property name="lineid" column="LINEID"/>
+        <property name="empid" column="EMPID"/>
+        <property name="remark" column="REMARK"/>
+    </class>
+</hibernate-mapping>
