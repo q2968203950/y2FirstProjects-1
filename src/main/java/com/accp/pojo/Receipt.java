@@ -1,9 +1,5 @@
 package com.accp.pojo;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
 import java.util.Objects;
 
 /**
@@ -12,7 +8,6 @@ import java.util.Objects;
  * @author: hjn
  * @create: 2019-08-20 15:22
  **/
-@Entity
 public class Receipt {
     private int receiptid;
     private String carno;
@@ -24,8 +19,6 @@ public class Receipt {
     private String toname;
     private String ptyoe;
 
-    @Id
-    @Column(name = "RECEIPTID")
     public int getReceiptid() {
         return receiptid;
     }
@@ -34,8 +27,6 @@ public class Receipt {
         this.receiptid = receiptid;
     }
 
-    @Basic
-    @Column(name = "CARNO")
     public String getCarno() {
         return carno;
     }
@@ -44,8 +35,6 @@ public class Receipt {
         this.carno = carno;
     }
 
-    @Basic
-    @Column(name = "DELIVERYSPOTID")
     public Integer getDeliveryspotid() {
         return deliveryspotid;
     }
@@ -54,8 +43,6 @@ public class Receipt {
         this.deliveryspotid = deliveryspotid;
     }
 
-    @Basic
-    @Column(name = "EMPID")
     public Integer getEmpid() {
         return empid;
     }
@@ -64,8 +51,6 @@ public class Receipt {
         this.empid = empid;
     }
 
-    @Basic
-    @Column(name = "CREATETIME")
     public String getCreatetime() {
         return createtime;
     }
@@ -74,8 +59,6 @@ public class Receipt {
         this.createtime = createtime;
     }
 
-    @Basic
-    @Column(name = "REMARK")
     public String getRemark() {
         return remark;
     }
@@ -84,8 +67,6 @@ public class Receipt {
         this.remark = remark;
     }
 
-    @Basic
-    @Column(name = "FLAG")
     public Integer getFlag() {
         return flag;
     }
@@ -94,8 +75,6 @@ public class Receipt {
         this.flag = flag;
     }
 
-    @Basic
-    @Column(name = "TONAME")
     public String getToname() {
         return toname;
     }
@@ -104,8 +83,6 @@ public class Receipt {
         this.toname = toname;
     }
 
-    @Basic
-    @Column(name = "PTYOE")
     public String getPtyoe() {
         return ptyoe;
     }

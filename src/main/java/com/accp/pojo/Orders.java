@@ -1,9 +1,5 @@
 package com.accp.pojo;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
 import java.util.Objects;
 
 /**
@@ -12,7 +8,6 @@ import java.util.Objects;
  * @author: hjn
  * @create: 2019-08-20 15:22
  **/
-@Entity
 public class Orders {
     private int orderid;
     private String orderno;
@@ -28,8 +23,6 @@ public class Orders {
     private String receivepostcode;
     private int orderstateid;
 
-    @Id
-    @Column(name = "ORDERID")
     public int getOrderid() {
         return orderid;
     }
@@ -38,8 +31,6 @@ public class Orders {
         this.orderid = orderid;
     }
 
-    @Basic
-    @Column(name = "ORDERNO")
     public String getOrderno() {
         return orderno;
     }
@@ -48,8 +39,6 @@ public class Orders {
         this.orderno = orderno;
     }
 
-    @Basic
-    @Column(name = "SENDNAME")
     public String getSendname() {
         return sendname;
     }
@@ -58,8 +47,6 @@ public class Orders {
         this.sendname = sendname;
     }
 
-    @Basic
-    @Column(name = "SENDADDRESS")
     public String getSendaddress() {
         return sendaddress;
     }
@@ -68,8 +55,6 @@ public class Orders {
         this.sendaddress = sendaddress;
     }
 
-    @Basic
-    @Column(name = "SENDTEL")
     public String getSendtel() {
         return sendtel;
     }
@@ -78,8 +63,6 @@ public class Orders {
         this.sendtel = sendtel;
     }
 
-    @Basic
-    @Column(name = "SENDMOBTLE")
     public String getSendmobtle() {
         return sendmobtle;
     }
@@ -88,8 +71,6 @@ public class Orders {
         this.sendmobtle = sendmobtle;
     }
 
-    @Basic
-    @Column(name = "SENDPOSTCODE")
     public String getSendpostcode() {
         return sendpostcode;
     }
@@ -98,8 +79,6 @@ public class Orders {
         this.sendpostcode = sendpostcode;
     }
 
-    @Basic
-    @Column(name = "RECEIVENAME")
     public String getReceivename() {
         return receivename;
     }
@@ -108,8 +87,6 @@ public class Orders {
         this.receivename = receivename;
     }
 
-    @Basic
-    @Column(name = "RECEIVEADDRESS")
     public String getReceiveaddress() {
         return receiveaddress;
     }
@@ -118,8 +95,6 @@ public class Orders {
         this.receiveaddress = receiveaddress;
     }
 
-    @Basic
-    @Column(name = "RECEIVETEL")
     public String getReceivetel() {
         return receivetel;
     }
@@ -128,8 +103,6 @@ public class Orders {
         this.receivetel = receivetel;
     }
 
-    @Basic
-    @Column(name = "RECEIVEMODILE")
     public String getReceivemodile() {
         return receivemodile;
     }
@@ -138,8 +111,6 @@ public class Orders {
         this.receivemodile = receivemodile;
     }
 
-    @Basic
-    @Column(name = "RECEIVEPOSTCODE")
     public String getReceivepostcode() {
         return receivepostcode;
     }
@@ -148,8 +119,6 @@ public class Orders {
         this.receivepostcode = receivepostcode;
     }
 
-    @Basic
-    @Column(name = "ORDERSTATEID")
     public int getOrderstateid() {
         return orderstateid;
     }

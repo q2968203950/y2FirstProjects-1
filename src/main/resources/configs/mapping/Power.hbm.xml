@@ -2,9 +2,9 @@
 <!DOCTYPE hibernate-mapping PUBLIC
     "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<hibernate-mapping>
+<hibernate-mapping package="com.accp.pojo">
 
-    <class name="com.accp.pojo.Power" table="power" schema="logistics">
+    <class name="Power" table="power">
         <id name="powerid" column="POWERID"/>
         <property name="pname" column="PNAME"/>
     </class>

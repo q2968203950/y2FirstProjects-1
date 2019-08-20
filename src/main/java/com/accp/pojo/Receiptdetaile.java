@@ -1,9 +1,5 @@
 package com.accp.pojo;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
 import java.util.Objects;
 
 /**
@@ -12,14 +8,11 @@ import java.util.Objects;
  * @author: hjn
  * @create: 2019-08-20 15:22
  **/
-@Entity
 public class Receiptdetaile {
     private int rdid;
     private Integer receiptid;
     private Integer orderid;
 
-    @Id
-    @Column(name = "RDID")
     public int getRdid() {
         return rdid;
     }
@@ -28,8 +21,6 @@ public class Receiptdetaile {
         this.rdid = rdid;
     }
 
-    @Basic
-    @Column(name = "RECEIPTID")
     public Integer getReceiptid() {
         return receiptid;
     }
@@ -38,8 +29,6 @@ public class Receiptdetaile {
         this.receiptid = receiptid;
     }
 
-    @Basic
-    @Column(name = "ORDERID")
     public Integer getOrderid() {
         return orderid;
     }

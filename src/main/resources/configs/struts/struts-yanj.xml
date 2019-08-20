@@ -6,9 +6,9 @@
 
 <struts>
     <package name="yanj" namespace="/" extends="struts-default">
-        <action name="user_*" class="userAction" method="{1}">
-            <result>main.jsp</result>
-            <result name="input">index.jsp</result>
-        </action>
+        <!--<action name="user_*" class="userAction" method="{1}">-->
+            <!--<result>main.jsp</result>-->
+            <!--<result name="input">index.jsp</result>-->
+        <!--</action>-->
     </package>
 </struts>

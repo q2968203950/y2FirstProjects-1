@@ -2,9 +2,9 @@
 <!DOCTYPE hibernate-mapping PUBLIC
     "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<hibernate-mapping>
+<hibernate-mapping package="com.accp.pojo">
 
-    <class name="com.accp.pojo.Orderstate" table="orderstate" schema="logistics">
+    <class name="Orderstate" table="orderstate">
         <id name="orderstateid" column="ORDERSTATEID"/>
         <property name="oname" column="ONAME"/>
     </class>
