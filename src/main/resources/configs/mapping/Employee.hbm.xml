@@ -2,9 +2,9 @@
 <!DOCTYPE hibernate-mapping PUBLIC
     "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<hibernate-mapping>
+<hibernate-mapping package="com.accp.pojo">
 
-    <class name="com.accp.pojo.Employee" table="employee" schema="logistics">
+    <class name="Employee" table="employee">
         <id name="empid" column="EMPID"/>
         <property name="empno" column="EMPNO"/>
         <property name="ename" column="ENAME"/>

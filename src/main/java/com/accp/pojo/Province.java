@@ -1,9 +1,5 @@
 package com.accp.pojo;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
 import java.util.Objects;
 
 /**
@@ -12,13 +8,10 @@ import java.util.Objects;
  * @author: hjn
  * @create: 2019-08-20 15:22
  **/
-@Entity
 public class Province {
     private int provinced;
     private String pname;
 
-    @Id
-    @Column(name = "PROVINCED")
     public int getProvinced() {
         return provinced;
     }
@@ -27,8 +20,6 @@ public class Province {
         this.provinced = provinced;
     }
 
-    @Basic
-    @Column(name = "PNAME")
     public String getPname() {
         return pname;
     }

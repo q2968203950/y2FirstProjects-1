@@ -1,19 +1,8 @@
 package com.accp.pojo;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
 import java.sql.Date;
 import java.util.Objects;
 
-/**
- * @program: y2FirstProjects
- * @description: Car
- * @author: hjn
- * @create: 2019-08-20 15:22
- **/
-@Entity
 public class Car {
     private int carid;
     private String carno;
@@ -28,8 +17,6 @@ public class Car {
     private int empid;
     private String remark;
 
-    @Id
-    @Column(name = "CARID")
     public int getCarid() {
         return carid;
     }
@@ -38,8 +25,6 @@ public class Car {
         this.carid = carid;
     }
 
-    @Basic
-    @Column(name = "CARNO")
     public String getCarno() {
         return carno;
     }
@@ -48,8 +33,6 @@ public class Car {
         this.carno = carno;
     }
 
-    @Basic
-    @Column(name = "WORKNO")
     public String getWorkno() {
         return workno;
     }
@@ -58,8 +41,6 @@ public class Car {
         this.workno = workno;
     }
 
-    @Basic
-    @Column(name = "CARTYPEID")
     public int getCartypeid() {
         return cartypeid;
     }
@@ -68,8 +49,6 @@ public class Car {
         this.cartypeid = cartypeid;
     }
 
-    @Basic
-    @Column(name = "CARSIZE")
     public int getCarsize() {
         return carsize;
     }
@@ -78,8 +57,6 @@ public class Car {
         this.carsize = carsize;
     }
 
-    @Basic
-    @Column(name = "TONNAGE")
     public int getTonnage() {
         return tonnage;
     }
@@ -88,8 +65,6 @@ public class Car {
         this.tonnage = tonnage;
     }
 
-    @Basic
-    @Column(name = "BUYTIME")
     public Date getBuytime() {
         return buytime;
     }
@@ -98,8 +73,6 @@ public class Car {
         this.buytime = buytime;
     }
 
-    @Basic
-    @Column(name = "LEAVETIME")
     public Date getLeavetime() {
         return leavetime;
     }
@@ -108,8 +81,6 @@ public class Car {
         this.leavetime = leavetime;
     }
 
-    @Basic
-    @Column(name = "CARSTATEID")
     public int getCarstateid() {
         return carstateid;
     }
@@ -118,8 +89,6 @@ public class Car {
         this.carstateid = carstateid;
     }
 
-    @Basic
-    @Column(name = "LINEID")
     public int getLineid() {
         return lineid;
     }
@@ -128,8 +97,6 @@ public class Car {
         this.lineid = lineid;
     }
 
-    @Basic
-    @Column(name = "EMPID")
     public int getEmpid() {
         return empid;
     }
@@ -138,8 +105,6 @@ public class Car {
         this.empid = empid;
     }
 
-    @Basic
-    @Column(name = "REMARK")
     public String getRemark() {
         return remark;
     }

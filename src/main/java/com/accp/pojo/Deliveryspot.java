@@ -1,9 +1,5 @@
 package com.accp.pojo;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
 import java.math.BigDecimal;
 import java.util.Objects;
 
@@ -13,7 +9,6 @@ import java.util.Objects;
  * @author: hjn
  * @create: 2019-08-20 15:22
  **/
-@Entity
 public class Deliveryspot {
     private int deliveryspotid;
     private String deliveryspotno;
@@ -30,8 +25,6 @@ public class Deliveryspot {
     private BigDecimal startvolumeprice;
     private BigDecimal secondvdlumeprice;
 
-    @Id
-    @Column(name = "DELIVERYSPOTID")
     public int getDeliveryspotid() {
         return deliveryspotid;
     }
@@ -40,8 +33,6 @@ public class Deliveryspot {
         this.deliveryspotid = deliveryspotid;
     }
 
-    @Basic
-    @Column(name = "DELIVERYSPOTNO")
     public String getDeliveryspotno() {
         return deliveryspotno;
     }
@@ -50,8 +41,6 @@ public class Deliveryspot {
         this.deliveryspotno = deliveryspotno;
     }
 
-    @Basic
-    @Column(name = "DNAME")
     public String getDname() {
         return dname;
     }
@@ -60,8 +49,6 @@ public class Deliveryspot {
         this.dname = dname;
     }
 
-    @Basic
-    @Column(name = "PROVINCEID")
     public int getProvinceid() {
         return provinceid;
     }
@@ -70,8 +57,6 @@ public class Deliveryspot {
         this.provinceid = provinceid;
     }
 
-    @Basic
-    @Column(name = "CITYID")
     public int getCityid() {
         return cityid;
     }
@@ -80,8 +65,6 @@ public class Deliveryspot {
         this.cityid = cityid;
     }
 
-    @Basic
-    @Column(name = "EMPID")
     public int getEmpid() {
         return empid;
     }
@@ -90,8 +73,6 @@ public class Deliveryspot {
         this.empid = empid;
     }
 
-    @Basic
-    @Column(name = "TEL")
     public String getTel() {
         return tel;
     }
@@ -100,8 +81,6 @@ public class Deliveryspot {
         this.tel = tel;
     }
 
-    @Basic
-    @Column(name = "STARTSCOPE")
     public BigDecimal getStartscope() {
         return startscope;
     }
@@ -110,8 +89,6 @@ public class Deliveryspot {
         this.startscope = startscope;
     }
 
-    @Basic
-    @Column(name = "STARTPRICE")
     public BigDecimal getStartprice() {
         return startprice;
     }
@@ -120,8 +97,6 @@ public class Deliveryspot {
         this.startprice = startprice;
     }
 
-    @Basic
-    @Column(name = "SECONDPRICE")
     public BigDecimal getSecondprice() {
         return secondprice;
     }
@@ -130,8 +105,6 @@ public class Deliveryspot {
         this.secondprice = secondprice;
     }
 
-    @Basic
-    @Column(name = "FLAG")
     public int getFlag() {
         return flag;
     }
@@ -140,8 +113,6 @@ public class Deliveryspot {
         this.flag = flag;
     }
 
-    @Basic
-    @Column(name = "STARTVOLUMESCOPE")
     public BigDecimal getStartvolumescope() {
         return startvolumescope;
     }
@@ -150,8 +121,6 @@ public class Deliveryspot {
         this.startvolumescope = startvolumescope;
     }
 
-    @Basic
-    @Column(name = "STARTVOLUMEPRICE")
     public BigDecimal getStartvolumeprice() {
         return startvolumeprice;
     }
@@ -160,8 +129,6 @@ public class Deliveryspot {
         this.startvolumeprice = startvolumeprice;
     }
 
-    @Basic
-    @Column(name = "SECONDVDLUMEPRICE")
     public BigDecimal getSecondvdlumeprice() {
         return secondvdlumeprice;
     }

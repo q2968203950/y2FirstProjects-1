@@ -2,9 +2,9 @@
 <!DOCTYPE hibernate-mapping PUBLIC
     "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<hibernate-mapping>
+<hibernate-mapping package="com.accp.pojo">
 
-    <class name="com.accp.pojo.Users" table="users" schema="logistics">
+    <class name="Users" table="users">
         <id name="userid" column="USERID"/>
         <property name="username" column="USERNAME"/>
         <property name="passowrd" column="PASSOWRD"/>
