@@ -1,13 +1,6 @@
 package com.accp.pojo;
 
-import java.util.Objects;
 
-/**
- * @program: y2FirstProjects
- * @description: Receiptdetaile
- * @author: hjn
- * @create: 2019-08-20 15:22
- **/
 public class Receiptdetaile {
     private int rdid;
     private Integer receiptid;
@@ -41,14 +34,21 @@ public class Receiptdetaile {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
+
         Receiptdetaile that = (Receiptdetaile) o;
-        return rdid == that.rdid &&
-                Objects.equals(receiptid, that.receiptid) &&
-                Objects.equals(orderid, that.orderid);
+
+        if (rdid != that.rdid) return false;
+        if (receiptid != null ? !receiptid.equals(that.receiptid) : that.receiptid != null) return false;
+        if (orderid != null ? !orderid.equals(that.orderid) : that.orderid != null) return false;
+
+        return true;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(rdid, receiptid, orderid);
+        int result = rdid;
+        result = 31 * result + (receiptid != null ? receiptid.hashCode() : 0);
+        result = 31 * result + (orderid != null ? orderid.hashCode() : 0);
+        return result;
     }
 }

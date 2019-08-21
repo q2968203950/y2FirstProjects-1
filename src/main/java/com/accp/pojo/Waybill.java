@@ -2,14 +2,7 @@ package com.accp.pojo;
 
 import java.math.BigDecimal;
 import java.sql.Date;
-import java.util.Objects;
 
-/**
- * @program: y2FirstProjects
- * @description: Waybill
- * @author: hjn
- * @create: 2019-08-20 15:22
- **/
 public class Waybill {
     private int id;
     private int orderid;
@@ -106,21 +99,35 @@ public class Waybill {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
+
         Waybill waybill = (Waybill) o;
-        return id == waybill.id &&
-                orderid == waybill.orderid &&
-                deliveryspotid == waybill.deliveryspotid &&
-                Objects.equals(totalprice, waybill.totalprice) &&
-                Objects.equals(insureprice, waybill.insureprice) &&
-                Objects.equals(goodsprice, waybill.goodsprice) &&
-                Objects.equals(volume, waybill.volume) &&
-                Objects.equals(weight, waybill.weight) &&
-                Objects.equals(remark, waybill.remark) &&
-                Objects.equals(createtime, waybill.createtime);
+
+        if (id != waybill.id) return false;
+        if (orderid != waybill.orderid) return false;
+        if (deliveryspotid != waybill.deliveryspotid) return false;
+        if (totalprice != null ? !totalprice.equals(waybill.totalprice) : waybill.totalprice != null) return false;
+        if (insureprice != null ? !insureprice.equals(waybill.insureprice) : waybill.insureprice != null) return false;
+        if (goodsprice != null ? !goodsprice.equals(waybill.goodsprice) : waybill.goodsprice != null) return false;
+        if (volume != null ? !volume.equals(waybill.volume) : waybill.volume != null) return false;
+        if (weight != null ? !weight.equals(waybill.weight) : waybill.weight != null) return false;
+        if (remark != null ? !remark.equals(waybill.remark) : waybill.remark != null) return false;
+        if (createtime != null ? !createtime.equals(waybill.createtime) : waybill.createtime != null) return false;
+
+        return true;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, orderid, totalprice, insureprice, goodsprice, volume, weight, remark, createtime, deliveryspotid);
+        int result = id;
+        result = 31 * result + orderid;
+        result = 31 * result + (totalprice != null ? totalprice.hashCode() : 0);
+        result = 31 * result + (insureprice != null ? insureprice.hashCode() : 0);
+        result = 31 * result + (goodsprice != null ? goodsprice.hashCode() : 0);
+        result = 31 * result + (volume != null ? volume.hashCode() : 0);
+        result = 31 * result + (weight != null ? weight.hashCode() : 0);
+        result = 31 * result + (remark != null ? remark.hashCode() : 0);
+        result = 31 * result + (createtime != null ? createtime.hashCode() : 0);
+        result = 31 * result + deliveryspotid;
+        return result;
     }
 }
