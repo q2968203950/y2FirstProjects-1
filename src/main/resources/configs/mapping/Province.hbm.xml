@@ -2,10 +2,14 @@
 <!DOCTYPE hibernate-mapping PUBLIC
     "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<hibernate-mapping>
+<hibernate-mapping package="com.accp.pojo" auto-import="true">
 
-    <class name="com.accp.pojo.Province" table="province" schema="logistics">
-        <id name="provinced" column="PROVINCED"/>
-        <property name="pname" column="PNAME"/>
+    <class name="Province" table="province">
+        <id name="provinced">
+            <column name="PROVINCED" sql-type="int(11)"/>
+        </id>
+        <property name="pname">
+            <column name="PNAME" sql-type="varchar(20)" length="20"/>
+        </property>
     </class>
 </hibernate-mapping>

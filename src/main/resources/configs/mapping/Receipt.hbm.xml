@@ -2,17 +2,35 @@
 <!DOCTYPE hibernate-mapping PUBLIC
     "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<hibernate-mapping>
+<hibernate-mapping package="com.accp.pojo" auto-import="true">
 
-    <class name="com.accp.pojo.Receipt" table="receipt" schema="logistics">
-        <id name="receiptid" column="RECEIPTID"/>
-        <property name="carno" column="CARNO"/>
-        <property name="deliveryspotid" column="DELIVERYSPOTID"/>
-        <property name="empid" column="EMPID"/>
-        <property name="createtime" column="CREATETIME"/>
-        <property name="remark" column="REMARK"/>
-        <property name="flag" column="FLAG"/>
-        <property name="toname" column="TONAME"/>
-        <property name="ptyoe" column="PTYOE"/>
+    <class name="Receipt" table="receipt">
+        <id name="receiptid">
+            <column name="RECEIPTID" sql-type="int(11)"/>
+        </id>
+        <property name="carno">
+            <column name="CARNO" sql-type="varchar(20)" length="20"/>
+        </property>
+        <property name="deliveryspotid">
+            <column name="DELIVERYSPOTID" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="empid">
+            <column name="EMPID" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="createtime">
+            <column name="CREATETIME" sql-type="varchar(20)" length="20" not-null="true"/>
+        </property>
+        <property name="remark">
+            <column name="REMARK" sql-type="varchar(500)" length="500" not-null="true"/>
+        </property>
+        <property name="flag">
+            <column name="FLAG" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="toname">
+            <column name="TONAME" sql-type="varchar(20)" length="20" not-null="true"/>
+        </property>
+        <property name="ptyoe">
+            <column name="PTYOE" sql-type="varchar(20)" length="20" not-null="true"/>
+        </property>
     </class>
 </hibernate-mapping>

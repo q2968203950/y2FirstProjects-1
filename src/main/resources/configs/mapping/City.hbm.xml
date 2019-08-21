@@ -2,11 +2,17 @@
 <!DOCTYPE hibernate-mapping PUBLIC
     "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<hibernate-mapping>
+<hibernate-mapping  package="com.accp.pojo" auto-import="true">
 
-    <class name="com.accp.pojo.City" table="city" schema="logistics">
-        <id name="cityid" column="CITYID"/>
-        <property name="cname" column="CNAME"/>
-        <property name="provinceid" column="PROVINCEID"/>
+    <class name="City" table="city">
+        <id name="cityid">
+            <column name="CITYID" sql-type="int(11)"/>
+        </id>
+        <property name="cname">
+            <column name="CNAME" sql-type="varchar(20)" length="20"/>
+        </property>
+        <property name="provinceid">
+            <column name="PROVINCEID" sql-type="int(11)"/>
+        </property>
     </class>
 </hibernate-mapping>

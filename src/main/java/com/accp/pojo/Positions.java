@@ -1,24 +1,10 @@
 package com.accp.pojo;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import java.util.Objects;
 
-/**
- * @program: y2FirstProjects
- * @description: Positions
- * @author: hjn
- * @create: 2019-08-20 15:22
- **/
-@Entity
 public class Positions {
     private int positidnid;
     private String pname;
 
-    @Id
-    @Column(name = "POSITIDNID")
     public int getPositidnid() {
         return positidnid;
     }
@@ -27,8 +13,6 @@ public class Positions {
         this.positidnid = positidnid;
     }
 
-    @Basic
-    @Column(name = "PNAME")
     public String getPname() {
         return pname;
     }
@@ -41,13 +25,19 @@ public class Positions {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
+
         Positions positions = (Positions) o;
-        return positidnid == positions.positidnid &&
-                Objects.equals(pname, positions.pname);
+
+        if (positidnid != positions.positidnid) return false;
+        if (pname != null ? !pname.equals(positions.pname) : positions.pname != null) return false;
+
+        return true;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(positidnid, pname);
+        int result = positidnid;
+        result = 31 * result + (pname != null ? pname.hashCode() : 0);
+        return result;
     }
 }

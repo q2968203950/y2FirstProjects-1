@@ -1,19 +1,7 @@
 package com.accp.pojo;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
 import java.math.BigDecimal;
-import java.util.Objects;
 
-/**
- * @program: y2FirstProjects
- * @description: Deliveryspot
- * @author: hjn
- * @create: 2019-08-20 15:22
- **/
-@Entity
 public class Deliveryspot {
     private int deliveryspotid;
     private String deliveryspotno;
@@ -30,8 +18,6 @@ public class Deliveryspot {
     private BigDecimal startvolumeprice;
     private BigDecimal secondvdlumeprice;
 
-    @Id
-    @Column(name = "DELIVERYSPOTID")
     public int getDeliveryspotid() {
         return deliveryspotid;
     }
@@ -40,8 +26,6 @@ public class Deliveryspot {
         this.deliveryspotid = deliveryspotid;
     }
 
-    @Basic
-    @Column(name = "DELIVERYSPOTNO")
     public String getDeliveryspotno() {
         return deliveryspotno;
     }
@@ -50,8 +34,6 @@ public class Deliveryspot {
         this.deliveryspotno = deliveryspotno;
     }
 
-    @Basic
-    @Column(name = "DNAME")
     public String getDname() {
         return dname;
     }
@@ -60,8 +42,6 @@ public class Deliveryspot {
         this.dname = dname;
     }
 
-    @Basic
-    @Column(name = "PROVINCEID")
     public int getProvinceid() {
         return provinceid;
     }
@@ -70,8 +50,6 @@ public class Deliveryspot {
         this.provinceid = provinceid;
     }
 
-    @Basic
-    @Column(name = "CITYID")
     public int getCityid() {
         return cityid;
     }
@@ -80,8 +58,6 @@ public class Deliveryspot {
         this.cityid = cityid;
     }
 
-    @Basic
-    @Column(name = "EMPID")
     public int getEmpid() {
         return empid;
     }
@@ -90,8 +66,6 @@ public class Deliveryspot {
         this.empid = empid;
     }
 
-    @Basic
-    @Column(name = "TEL")
     public String getTel() {
         return tel;
     }
@@ -100,8 +74,6 @@ public class Deliveryspot {
         this.tel = tel;
     }
 
-    @Basic
-    @Column(name = "STARTSCOPE")
     public BigDecimal getStartscope() {
         return startscope;
     }
@@ -110,8 +82,6 @@ public class Deliveryspot {
         this.startscope = startscope;
     }
 
-    @Basic
-    @Column(name = "STARTPRICE")
     public BigDecimal getStartprice() {
         return startprice;
     }
@@ -120,8 +90,6 @@ public class Deliveryspot {
         this.startprice = startprice;
     }
 
-    @Basic
-    @Column(name = "SECONDPRICE")
     public BigDecimal getSecondprice() {
         return secondprice;
     }
@@ -130,8 +98,6 @@ public class Deliveryspot {
         this.secondprice = secondprice;
     }
 
-    @Basic
-    @Column(name = "FLAG")
     public int getFlag() {
         return flag;
     }
@@ -140,8 +106,6 @@ public class Deliveryspot {
         this.flag = flag;
     }
 
-    @Basic
-    @Column(name = "STARTVOLUMESCOPE")
     public BigDecimal getStartvolumescope() {
         return startvolumescope;
     }
@@ -150,8 +114,6 @@ public class Deliveryspot {
         this.startvolumescope = startvolumescope;
     }
 
-    @Basic
-    @Column(name = "STARTVOLUMEPRICE")
     public BigDecimal getStartvolumeprice() {
         return startvolumeprice;
     }
@@ -160,8 +122,6 @@ public class Deliveryspot {
         this.startvolumeprice = startvolumeprice;
     }
 
-    @Basic
-    @Column(name = "SECONDVDLUMEPRICE")
     public BigDecimal getSecondvdlumeprice() {
         return secondvdlumeprice;
     }
@@ -174,25 +134,47 @@ public class Deliveryspot {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
+
         Deliveryspot that = (Deliveryspot) o;
-        return deliveryspotid == that.deliveryspotid &&
-                provinceid == that.provinceid &&
-                cityid == that.cityid &&
-                empid == that.empid &&
-                flag == that.flag &&
-                Objects.equals(deliveryspotno, that.deliveryspotno) &&
-                Objects.equals(dname, that.dname) &&
-                Objects.equals(tel, that.tel) &&
-                Objects.equals(startscope, that.startscope) &&
-                Objects.equals(startprice, that.startprice) &&
-                Objects.equals(secondprice, that.secondprice) &&
-                Objects.equals(startvolumescope, that.startvolumescope) &&
-                Objects.equals(startvolumeprice, that.startvolumeprice) &&
-                Objects.equals(secondvdlumeprice, that.secondvdlumeprice);
+
+        if (deliveryspotid != that.deliveryspotid) return false;
+        if (provinceid != that.provinceid) return false;
+        if (cityid != that.cityid) return false;
+        if (empid != that.empid) return false;
+        if (flag != that.flag) return false;
+        if (deliveryspotno != null ? !deliveryspotno.equals(that.deliveryspotno) : that.deliveryspotno != null)
+            return false;
+        if (dname != null ? !dname.equals(that.dname) : that.dname != null) return false;
+        if (tel != null ? !tel.equals(that.tel) : that.tel != null) return false;
+        if (startscope != null ? !startscope.equals(that.startscope) : that.startscope != null) return false;
+        if (startprice != null ? !startprice.equals(that.startprice) : that.startprice != null) return false;
+        if (secondprice != null ? !secondprice.equals(that.secondprice) : that.secondprice != null) return false;
+        if (startvolumescope != null ? !startvolumescope.equals(that.startvolumescope) : that.startvolumescope != null)
+            return false;
+        if (startvolumeprice != null ? !startvolumeprice.equals(that.startvolumeprice) : that.startvolumeprice != null)
+            return false;
+        if (secondvdlumeprice != null ? !secondvdlumeprice.equals(that.secondvdlumeprice) : that.secondvdlumeprice != null)
+            return false;
+
+        return true;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(deliveryspotid, deliveryspotno, dname, provinceid, cityid, empid, tel, startscope, startprice, secondprice, flag, startvolumescope, startvolumeprice, secondvdlumeprice);
+        int result = deliveryspotid;
+        result = 31 * result + (deliveryspotno != null ? deliveryspotno.hashCode() : 0);
+        result = 31 * result + (dname != null ? dname.hashCode() : 0);
+        result = 31 * result + provinceid;
+        result = 31 * result + cityid;
+        result = 31 * result + empid;
+        result = 31 * result + (tel != null ? tel.hashCode() : 0);
+        result = 31 * result + (startscope != null ? startscope.hashCode() : 0);
+        result = 31 * result + (startprice != null ? startprice.hashCode() : 0);
+        result = 31 * result + (secondprice != null ? secondprice.hashCode() : 0);
+        result = 31 * result + flag;
+        result = 31 * result + (startvolumescope != null ? startvolumescope.hashCode() : 0);
+        result = 31 * result + (startvolumeprice != null ? startvolumeprice.hashCode() : 0);
+        result = 31 * result + (secondvdlumeprice != null ? secondvdlumeprice.hashCode() : 0);
+        return result;
     }
 }

@@ -1,24 +1,10 @@
 package com.accp.pojo;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import java.util.Objects;
 
-/**
- * @program: y2FirstProjects
- * @description: Province
- * @author: hjn
- * @create: 2019-08-20 15:22
- **/
-@Entity
 public class Province {
     private int provinced;
     private String pname;
 
-    @Id
-    @Column(name = "PROVINCED")
     public int getProvinced() {
         return provinced;
     }
@@ -27,8 +13,6 @@ public class Province {
         this.provinced = provinced;
     }
 
-    @Basic
-    @Column(name = "PNAME")
     public String getPname() {
         return pname;
     }
@@ -41,13 +25,19 @@ public class Province {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
+
         Province province = (Province) o;
-        return provinced == province.provinced &&
-                Objects.equals(pname, province.pname);
+
+        if (provinced != province.provinced) return false;
+        if (pname != null ? !pname.equals(province.pname) : province.pname != null) return false;
+
+        return true;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(provinced, pname);
+        int result = provinced;
+        result = 31 * result + (pname != null ? pname.hashCode() : 0);
+        return result;
     }
 }

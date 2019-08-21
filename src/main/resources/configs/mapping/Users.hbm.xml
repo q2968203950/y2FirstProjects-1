@@ -2,14 +2,26 @@
 <!DOCTYPE hibernate-mapping PUBLIC
     "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<hibernate-mapping>
+<hibernate-mapping package="com.accp.pojo" auto-import="true">
 
-    <class name="com.accp.pojo.Users" table="users" schema="logistics">
-        <id name="userid" column="USERID"/>
-        <property name="username" column="USERNAME"/>
-        <property name="passowrd" column="PASSOWRD"/>
-        <property name="powerid" column="POWERID"/>
-        <property name="deliveryspotid" column="DELIVERYSPOTID"/>
-        <property name="empid" column="EMPID"/>
+    <class name="Users" table="users">
+        <id name="userid">
+            <column name="USERID" sql-type="int(11)"/>
+        </id>
+        <property name="username">
+            <column name="USERNAME" sql-type="varchar(20)" length="20" not-null="true"/>
+        </property>
+        <property name="passowrd">
+            <column name="PASSOWRD" sql-type="varchar(20)" length="20" not-null="true"/>
+        </property>
+        <property name="powerid">
+            <column name="POWERID" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="deliveryspotid">
+            <column name="DELIVERYSPOTID" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="empid">
+            <column name="EMPID" sql-type="int(11)"/>
+        </property>
     </class>
 </hibernate-mapping>

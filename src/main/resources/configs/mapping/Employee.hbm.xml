@@ -2,22 +2,50 @@
 <!DOCTYPE hibernate-mapping PUBLIC
     "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<hibernate-mapping>
+<hibernate-mapping package="com.accp.pojo" auto-import="true">
 
-    <class name="com.accp.pojo.Employee" table="employee" schema="logistics">
-        <id name="empid" column="EMPID"/>
-        <property name="empno" column="EMPNO"/>
-        <property name="ename" column="ENAME"/>
-        <property name="genoer" column="GENOER"/>
-        <property name="birthday" column="BIRTHDAY"/>
-        <property name="address" column="ADDRESS"/>
-        <property name="tel" column="TEL"/>
-        <property name="startwordtime" column="STARTWORDTIME"/>
-        <property name="salary" column="SALARY"/>
-        <property name="email" column="EMAIL"/>
-        <property name="cardid" column="CARDID"/>
-        <property name="psoitionid" column="PSOITIONID"/>
-        <property name="deliveryspotid" column="DELIVERYSPOTID"/>
-        <property name="flag" column="FLAG"/>
+    <class name="Employee" table="employee">
+        <id name="empid">
+            <column name="EMPID" sql-type="int(11)"/>
+        </id>
+        <property name="empno">
+            <column name="EMPNO" sql-type="varchar(20)" length="20"/>
+        </property>
+        <property name="ename">
+            <column name="ENAME" sql-type="varchar(20)" length="20"/>
+        </property>
+        <property name="genoer">
+            <column name="GENOER" sql-type="int(11)"/>
+        </property>
+        <property name="birthday">
+            <column name="BIRTHDAY" sql-type="date"/>
+        </property>
+        <property name="address">
+            <column name="ADDRESS" sql-type="varchar(100)" length="100"/>
+        </property>
+        <property name="tel">
+            <column name="TEL" sql-type="varchar(20)" length="20"/>
+        </property>
+        <property name="startwordtime">
+            <column name="STARTWORDTIME" sql-type="date"/>
+        </property>
+        <property name="salary">
+            <column name="SALARY" sql-type="decimal(9,2)" precision="9" scale="2"/>
+        </property>
+        <property name="email">
+            <column name="EMAIL" sql-type="varchar(50)" length="50"/>
+        </property>
+        <property name="cardid">
+            <column name="CARDID" sql-type="varchar(50)" length="50"/>
+        </property>
+        <property name="psoitionid">
+            <column name="PSOITIONID" sql-type="int(11)"/>
+        </property>
+        <property name="deliveryspotid">
+            <column name="DELIVERYSPOTID" sql-type="int(11)"/>
+        </property>
+        <property name="flag">
+            <column name="FLAG" sql-type="int(11)"/>
+        </property>
     </class>
 </hibernate-mapping>

@@ -1,19 +1,7 @@
 package com.accp.pojo;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
 import java.sql.Date;
-import java.util.Objects;
 
-/**
- * @program: y2FirstProjects
- * @description: Car
- * @author: hjn
- * @create: 2019-08-20 15:22
- **/
-@Entity
 public class Car {
     private int carid;
     private String carno;
@@ -28,8 +16,6 @@ public class Car {
     private int empid;
     private String remark;
 
-    @Id
-    @Column(name = "CARID")
     public int getCarid() {
         return carid;
     }
@@ -38,8 +24,6 @@ public class Car {
         this.carid = carid;
     }
 
-    @Basic
-    @Column(name = "CARNO")
     public String getCarno() {
         return carno;
     }
@@ -48,8 +32,6 @@ public class Car {
         this.carno = carno;
     }
 
-    @Basic
-    @Column(name = "WORKNO")
     public String getWorkno() {
         return workno;
     }
@@ -58,8 +40,6 @@ public class Car {
         this.workno = workno;
     }
 
-    @Basic
-    @Column(name = "CARTYPEID")
     public int getCartypeid() {
         return cartypeid;
     }
@@ -68,8 +48,6 @@ public class Car {
         this.cartypeid = cartypeid;
     }
 
-    @Basic
-    @Column(name = "CARSIZE")
     public int getCarsize() {
         return carsize;
     }
@@ -78,8 +56,6 @@ public class Car {
         this.carsize = carsize;
     }
 
-    @Basic
-    @Column(name = "TONNAGE")
     public int getTonnage() {
         return tonnage;
     }
@@ -88,8 +64,6 @@ public class Car {
         this.tonnage = tonnage;
     }
 
-    @Basic
-    @Column(name = "BUYTIME")
     public Date getBuytime() {
         return buytime;
     }
@@ -98,8 +72,6 @@ public class Car {
         this.buytime = buytime;
     }
 
-    @Basic
-    @Column(name = "LEAVETIME")
     public Date getLeavetime() {
         return leavetime;
     }
@@ -108,8 +80,6 @@ public class Car {
         this.leavetime = leavetime;
     }
 
-    @Basic
-    @Column(name = "CARSTATEID")
     public int getCarstateid() {
         return carstateid;
     }
@@ -118,8 +88,6 @@ public class Car {
         this.carstateid = carstateid;
     }
 
-    @Basic
-    @Column(name = "LINEID")
     public int getLineid() {
         return lineid;
     }
@@ -128,8 +96,6 @@ public class Car {
         this.lineid = lineid;
     }
 
-    @Basic
-    @Column(name = "EMPID")
     public int getEmpid() {
         return empid;
     }
@@ -138,8 +104,6 @@ public class Car {
         this.empid = empid;
     }
 
-    @Basic
-    @Column(name = "REMARK")
     public String getRemark() {
         return remark;
     }
@@ -152,23 +116,39 @@ public class Car {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
+
         Car car = (Car) o;
-        return carid == car.carid &&
-                cartypeid == car.cartypeid &&
-                carsize == car.carsize &&
-                tonnage == car.tonnage &&
-                carstateid == car.carstateid &&
-                lineid == car.lineid &&
-                empid == car.empid &&
-                Objects.equals(carno, car.carno) &&
-                Objects.equals(workno, car.workno) &&
-                Objects.equals(buytime, car.buytime) &&
-                Objects.equals(leavetime, car.leavetime) &&
-                Objects.equals(remark, car.remark);
+
+        if (carid != car.carid) return false;
+        if (cartypeid != car.cartypeid) return false;
+        if (carsize != car.carsize) return false;
+        if (tonnage != car.tonnage) return false;
+        if (carstateid != car.carstateid) return false;
+        if (lineid != car.lineid) return false;
+        if (empid != car.empid) return false;
+        if (carno != null ? !carno.equals(car.carno) : car.carno != null) return false;
+        if (workno != null ? !workno.equals(car.workno) : car.workno != null) return false;
+        if (buytime != null ? !buytime.equals(car.buytime) : car.buytime != null) return false;
+        if (leavetime != null ? !leavetime.equals(car.leavetime) : car.leavetime != null) return false;
+        if (remark != null ? !remark.equals(car.remark) : car.remark != null) return false;
+
+        return true;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(carid, carno, workno, cartypeid, carsize, tonnage, buytime, leavetime, carstateid, lineid, empid, remark);
+        int result = carid;
+        result = 31 * result + (carno != null ? carno.hashCode() : 0);
+        result = 31 * result + (workno != null ? workno.hashCode() : 0);
+        result = 31 * result + cartypeid;
+        result = 31 * result + carsize;
+        result = 31 * result + tonnage;
+        result = 31 * result + (buytime != null ? buytime.hashCode() : 0);
+        result = 31 * result + (leavetime != null ? leavetime.hashCode() : 0);
+        result = 31 * result + carstateid;
+        result = 31 * result + lineid;
+        result = 31 * result + empid;
+        result = 31 * result + (remark != null ? remark.hashCode() : 0);
+        return result;
     }
 }

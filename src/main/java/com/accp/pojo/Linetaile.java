@@ -1,26 +1,12 @@
 package com.accp.pojo;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import java.util.Objects;
 
-/**
- * @program: y2FirstProjects
- * @description: Linetaile
- * @author: hjn
- * @create: 2019-08-20 15:22
- **/
-@Entity
 public class Linetaile {
     private int linedetaileid;
     private int lineid;
     private int deliveryspotid;
     private int lineindex;
 
-    @Id
-    @Column(name = "LINEDETAILEID")
     public int getLinedetaileid() {
         return linedetaileid;
     }
@@ -29,8 +15,6 @@ public class Linetaile {
         this.linedetaileid = linedetaileid;
     }
 
-    @Basic
-    @Column(name = "LINEID")
     public int getLineid() {
         return lineid;
     }
@@ -39,8 +23,6 @@ public class Linetaile {
         this.lineid = lineid;
     }
 
-    @Basic
-    @Column(name = "DELIVERYSPOTID")
     public int getDeliveryspotid() {
         return deliveryspotid;
     }
@@ -49,8 +31,6 @@ public class Linetaile {
         this.deliveryspotid = deliveryspotid;
     }
 
-    @Basic
-    @Column(name = "LINEINDEX")
     public int getLineindex() {
         return lineindex;
     }
@@ -63,15 +43,23 @@ public class Linetaile {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
+
         Linetaile linetaile = (Linetaile) o;
-        return linedetaileid == linetaile.linedetaileid &&
-                lineid == linetaile.lineid &&
-                deliveryspotid == linetaile.deliveryspotid &&
-                lineindex == linetaile.lineindex;
+
+        if (linedetaileid != linetaile.linedetaileid) return false;
+        if (lineid != linetaile.lineid) return false;
+        if (deliveryspotid != linetaile.deliveryspotid) return false;
+        if (lineindex != linetaile.lineindex) return false;
+
+        return true;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(linedetaileid, lineid, deliveryspotid, lineindex);
+        int result = linedetaileid;
+        result = 31 * result + lineid;
+        result = 31 * result + deliveryspotid;
+        result = 31 * result + lineindex;
+        return result;
     }
 }

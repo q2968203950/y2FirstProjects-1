@@ -1,18 +1,6 @@
 package com.accp.pojo;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import java.util.Objects;
 
-/**
- * @program: y2FirstProjects
- * @description: Users
- * @author: hjn
- * @create: 2019-08-20 15:22
- **/
-@Entity
 public class Users {
     private int userid;
     private String username;
@@ -21,8 +9,6 @@ public class Users {
     private Integer deliveryspotid;
     private int empid;
 
-    @Id
-    @Column(name = "USERID")
     public int getUserid() {
         return userid;
     }
@@ -31,8 +17,6 @@ public class Users {
         this.userid = userid;
     }
 
-    @Basic
-    @Column(name = "USERNAME")
     public String getUsername() {
         return username;
     }
@@ -41,8 +25,6 @@ public class Users {
         this.username = username;
     }
 
-    @Basic
-    @Column(name = "PASSOWRD")
     public String getPassowrd() {
         return passowrd;
     }
@@ -51,8 +33,6 @@ public class Users {
         this.passowrd = passowrd;
     }
 
-    @Basic
-    @Column(name = "POWERID")
     public Integer getPowerid() {
         return powerid;
     }
@@ -61,8 +41,6 @@ public class Users {
         this.powerid = powerid;
     }
 
-    @Basic
-    @Column(name = "DELIVERYSPOTID")
     public Integer getDeliveryspotid() {
         return deliveryspotid;
     }
@@ -71,8 +49,6 @@ public class Users {
         this.deliveryspotid = deliveryspotid;
     }
 
-    @Basic
-    @Column(name = "EMPID")
     public int getEmpid() {
         return empid;
     }
@@ -85,17 +61,28 @@ public class Users {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
+
         Users users = (Users) o;
-        return userid == users.userid &&
-                empid == users.empid &&
-                Objects.equals(username, users.username) &&
-                Objects.equals(passowrd, users.passowrd) &&
-                Objects.equals(powerid, users.powerid) &&
-                Objects.equals(deliveryspotid, users.deliveryspotid);
+
+        if (userid != users.userid) return false;
+        if (empid != users.empid) return false;
+        if (username != null ? !username.equals(users.username) : users.username != null) return false;
+        if (passowrd != null ? !passowrd.equals(users.passowrd) : users.passowrd != null) return false;
+        if (powerid != null ? !powerid.equals(users.powerid) : users.powerid != null) return false;
+        if (deliveryspotid != null ? !deliveryspotid.equals(users.deliveryspotid) : users.deliveryspotid != null)
+            return false;
+
+        return true;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(userid, username, passowrd, powerid, deliveryspotid, empid);
+        int result = userid;
+        result = 31 * result + (username != null ? username.hashCode() : 0);
+        result = 31 * result + (passowrd != null ? passowrd.hashCode() : 0);
+        result = 31 * result + (powerid != null ? powerid.hashCode() : 0);
+        result = 31 * result + (deliveryspotid != null ? deliveryspotid.hashCode() : 0);
+        result = 31 * result + empid;
+        return result;
     }
 }

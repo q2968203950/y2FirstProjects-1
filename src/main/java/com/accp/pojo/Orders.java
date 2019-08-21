@@ -1,18 +1,6 @@
 package com.accp.pojo;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import java.util.Objects;
 
-/**
- * @program: y2FirstProjects
- * @description: Orders
- * @author: hjn
- * @create: 2019-08-20 15:22
- **/
-@Entity
 public class Orders {
     private int orderid;
     private String orderno;
@@ -28,8 +16,6 @@ public class Orders {
     private String receivepostcode;
     private int orderstateid;
 
-    @Id
-    @Column(name = "ORDERID")
     public int getOrderid() {
         return orderid;
     }
@@ -38,8 +24,6 @@ public class Orders {
         this.orderid = orderid;
     }
 
-    @Basic
-    @Column(name = "ORDERNO")
     public String getOrderno() {
         return orderno;
     }
@@ -48,8 +32,6 @@ public class Orders {
         this.orderno = orderno;
     }
 
-    @Basic
-    @Column(name = "SENDNAME")
     public String getSendname() {
         return sendname;
     }
@@ -58,8 +40,6 @@ public class Orders {
         this.sendname = sendname;
     }
 
-    @Basic
-    @Column(name = "SENDADDRESS")
     public String getSendaddress() {
         return sendaddress;
     }
@@ -68,8 +48,6 @@ public class Orders {
         this.sendaddress = sendaddress;
     }
 
-    @Basic
-    @Column(name = "SENDTEL")
     public String getSendtel() {
         return sendtel;
     }
@@ -78,8 +56,6 @@ public class Orders {
         this.sendtel = sendtel;
     }
 
-    @Basic
-    @Column(name = "SENDMOBTLE")
     public String getSendmobtle() {
         return sendmobtle;
     }
@@ -88,8 +64,6 @@ public class Orders {
         this.sendmobtle = sendmobtle;
     }
 
-    @Basic
-    @Column(name = "SENDPOSTCODE")
     public String getSendpostcode() {
         return sendpostcode;
     }
@@ -98,8 +72,6 @@ public class Orders {
         this.sendpostcode = sendpostcode;
     }
 
-    @Basic
-    @Column(name = "RECEIVENAME")
     public String getReceivename() {
         return receivename;
     }
@@ -108,8 +80,6 @@ public class Orders {
         this.receivename = receivename;
     }
 
-    @Basic
-    @Column(name = "RECEIVEADDRESS")
     public String getReceiveaddress() {
         return receiveaddress;
     }
@@ -118,8 +88,6 @@ public class Orders {
         this.receiveaddress = receiveaddress;
     }
 
-    @Basic
-    @Column(name = "RECEIVETEL")
     public String getReceivetel() {
         return receivetel;
     }
@@ -128,8 +96,6 @@ public class Orders {
         this.receivetel = receivetel;
     }
 
-    @Basic
-    @Column(name = "RECEIVEMODILE")
     public String getReceivemodile() {
         return receivemodile;
     }
@@ -138,8 +104,6 @@ public class Orders {
         this.receivemodile = receivemodile;
     }
 
-    @Basic
-    @Column(name = "RECEIVEPOSTCODE")
     public String getReceivepostcode() {
         return receivepostcode;
     }
@@ -148,8 +112,6 @@ public class Orders {
         this.receivepostcode = receivepostcode;
     }
 
-    @Basic
-    @Column(name = "ORDERSTATEID")
     public int getOrderstateid() {
         return orderstateid;
     }
@@ -162,24 +124,45 @@ public class Orders {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
+
         Orders orders = (Orders) o;
-        return orderid == orders.orderid &&
-                orderstateid == orders.orderstateid &&
-                Objects.equals(orderno, orders.orderno) &&
-                Objects.equals(sendname, orders.sendname) &&
-                Objects.equals(sendaddress, orders.sendaddress) &&
-                Objects.equals(sendtel, orders.sendtel) &&
-                Objects.equals(sendmobtle, orders.sendmobtle) &&
-                Objects.equals(sendpostcode, orders.sendpostcode) &&
-                Objects.equals(receivename, orders.receivename) &&
-                Objects.equals(receiveaddress, orders.receiveaddress) &&
-                Objects.equals(receivetel, orders.receivetel) &&
-                Objects.equals(receivemodile, orders.receivemodile) &&
-                Objects.equals(receivepostcode, orders.receivepostcode);
+
+        if (orderid != orders.orderid) return false;
+        if (orderstateid != orders.orderstateid) return false;
+        if (orderno != null ? !orderno.equals(orders.orderno) : orders.orderno != null) return false;
+        if (sendname != null ? !sendname.equals(orders.sendname) : orders.sendname != null) return false;
+        if (sendaddress != null ? !sendaddress.equals(orders.sendaddress) : orders.sendaddress != null) return false;
+        if (sendtel != null ? !sendtel.equals(orders.sendtel) : orders.sendtel != null) return false;
+        if (sendmobtle != null ? !sendmobtle.equals(orders.sendmobtle) : orders.sendmobtle != null) return false;
+        if (sendpostcode != null ? !sendpostcode.equals(orders.sendpostcode) : orders.sendpostcode != null)
+            return false;
+        if (receivename != null ? !receivename.equals(orders.receivename) : orders.receivename != null) return false;
+        if (receiveaddress != null ? !receiveaddress.equals(orders.receiveaddress) : orders.receiveaddress != null)
+            return false;
+        if (receivetel != null ? !receivetel.equals(orders.receivetel) : orders.receivetel != null) return false;
+        if (receivemodile != null ? !receivemodile.equals(orders.receivemodile) : orders.receivemodile != null)
+            return false;
+        if (receivepostcode != null ? !receivepostcode.equals(orders.receivepostcode) : orders.receivepostcode != null)
+            return false;
+
+        return true;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(orderid, orderno, sendname, sendaddress, sendtel, sendmobtle, sendpostcode, receivename, receiveaddress, receivetel, receivemodile, receivepostcode, orderstateid);
+        int result = orderid;
+        result = 31 * result + (orderno != null ? orderno.hashCode() : 0);
+        result = 31 * result + (sendname != null ? sendname.hashCode() : 0);
+        result = 31 * result + (sendaddress != null ? sendaddress.hashCode() : 0);
+        result = 31 * result + (sendtel != null ? sendtel.hashCode() : 0);
+        result = 31 * result + (sendmobtle != null ? sendmobtle.hashCode() : 0);
+        result = 31 * result + (sendpostcode != null ? sendpostcode.hashCode() : 0);
+        result = 31 * result + (receivename != null ? receivename.hashCode() : 0);
+        result = 31 * result + (receiveaddress != null ? receiveaddress.hashCode() : 0);
+        result = 31 * result + (receivetel != null ? receivetel.hashCode() : 0);
+        result = 31 * result + (receivemodile != null ? receivemodile.hashCode() : 0);
+        result = 31 * result + (receivepostcode != null ? receivepostcode.hashCode() : 0);
+        result = 31 * result + orderstateid;
+        return result;
     }
 }

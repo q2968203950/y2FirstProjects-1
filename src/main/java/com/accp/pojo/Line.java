@@ -1,26 +1,12 @@
 package com.accp.pojo;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import java.util.Objects;
 
-/**
- * @program: y2FirstProjects
- * @description: Line
- * @author: hjn
- * @create: 2019-08-20 15:22
- **/
-@Entity
 public class Line {
     private int lineid;
     private int lineno;
     private String linename;
     private int length;
 
-    @Id
-    @Column(name = "LINEID")
     public int getLineid() {
         return lineid;
     }
@@ -29,8 +15,6 @@ public class Line {
         this.lineid = lineid;
     }
 
-    @Basic
-    @Column(name = "LINENO")
     public int getLineno() {
         return lineno;
     }
@@ -39,8 +23,6 @@ public class Line {
         this.lineno = lineno;
     }
 
-    @Basic
-    @Column(name = "LINENAME")
     public String getLinename() {
         return linename;
     }
@@ -49,8 +31,6 @@ public class Line {
         this.linename = linename;
     }
 
-    @Basic
-    @Column(name = "LENGTH")
     public int getLength() {
         return length;
     }
@@ -63,15 +43,23 @@ public class Line {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
+
         Line line = (Line) o;
-        return lineid == line.lineid &&
-                lineno == line.lineno &&
-                length == line.length &&
-                Objects.equals(linename, line.linename);
+
+        if (lineid != line.lineid) return false;
+        if (lineno != line.lineno) return false;
+        if (length != line.length) return false;
+        if (linename != null ? !linename.equals(line.linename) : line.linename != null) return false;
+
+        return true;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(lineid, lineno, linename, length);
+        int result = lineid;
+        result = 31 * result + lineno;
+        result = 31 * result + (linename != null ? linename.hashCode() : 0);
+        result = 31 * result + length;
+        return result;
     }
 }

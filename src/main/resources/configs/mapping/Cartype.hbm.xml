@@ -2,10 +2,14 @@
 <!DOCTYPE hibernate-mapping PUBLIC
     "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<hibernate-mapping>
+<hibernate-mapping package="com.accp.pojo" auto-import="true">
 
-    <class name="com.accp.pojo.Cartype" table="cartype" schema="logistics">
-        <id name="cartypeid" column="CARTYPEID"/>
-        <property name="tname" column="TNAME"/>
+    <class name="Cartype" table="cartype">
+        <id name="cartypeid">
+            <column name="CARTYPEID" sql-type="int(11)"/>
+        </id>
+        <property name="tname">
+            <column name="TNAME" sql-type="varchar(20)" length="20"/>
+        </property>
     </class>
 </hibernate-mapping>

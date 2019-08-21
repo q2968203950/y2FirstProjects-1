@@ -2,18 +2,38 @@
 <!DOCTYPE hibernate-mapping PUBLIC
     "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<hibernate-mapping>
+<hibernate-mapping package="com.accp.pojo" auto-import="true">
 
-    <class name="com.accp.pojo.Waybill" table="waybill" schema="logistics">
-        <id name="id" column="id"/>
-        <property name="orderid" column="ORDERID"/>
-        <property name="totalprice" column="TOTALPRICE"/>
-        <property name="insureprice" column="INSUREPRICE"/>
-        <property name="goodsprice" column="GOODSPRICE"/>
-        <property name="volume" column="VOLUME"/>
-        <property name="weight" column="WEIGHT"/>
-        <property name="remark" column="REMARK"/>
-        <property name="createtime" column="CREATETIME"/>
-        <property name="deliveryspotid" column="DELIVERYSPOTID"/>
+    <class name="Waybill" table="waybill">
+        <id name="id">
+            <column name="id" sql-type="int(11)"/>
+        </id>
+        <property name="orderid">
+            <column name="ORDERID" sql-type="int(11)"/>
+        </property>
+        <property name="totalprice">
+            <column name="TOTALPRICE" sql-type="decimal(9,2)" precision="9" scale="2"/>
+        </property>
+        <property name="insureprice">
+            <column name="INSUREPRICE" sql-type="decimal(9,2)" precision="9" scale="2"/>
+        </property>
+        <property name="goodsprice">
+            <column name="GOODSPRICE" sql-type="decimal(9,2)" precision="9" scale="2"/>
+        </property>
+        <property name="volume">
+            <column name="VOLUME" sql-type="decimal(9,2)" precision="9" scale="2"/>
+        </property>
+        <property name="weight">
+            <column name="WEIGHT" sql-type="decimal(9,2)" precision="9" scale="2"/>
+        </property>
+        <property name="remark">
+            <column name="REMARK" sql-type="varchar(500)" length="500"/>
+        </property>
+        <property name="createtime">
+            <column name="CREATETIME" sql-type="date"/>
+        </property>
+        <property name="deliveryspotid">
+            <column name="DELIVERYSPOTID" sql-type="int(11)"/>
+        </property>
     </class>
 </hibernate-mapping>

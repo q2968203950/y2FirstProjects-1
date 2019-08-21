@@ -1,24 +1,10 @@
 package com.accp.pojo;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import java.util.Objects;
 
-/**
- * @program: y2FirstProjects
- * @description: Orderstate
- * @author: hjn
- * @create: 2019-08-20 15:22
- **/
-@Entity
 public class Orderstate {
     private int orderstateid;
     private String oname;
 
-    @Id
-    @Column(name = "ORDERSTATEID")
     public int getOrderstateid() {
         return orderstateid;
     }
@@ -27,8 +13,6 @@ public class Orderstate {
         this.orderstateid = orderstateid;
     }
 
-    @Basic
-    @Column(name = "ONAME")
     public String getOname() {
         return oname;
     }
@@ -41,13 +25,19 @@ public class Orderstate {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
+
         Orderstate that = (Orderstate) o;
-        return orderstateid == that.orderstateid &&
-                Objects.equals(oname, that.oname);
+
+        if (orderstateid != that.orderstateid) return false;
+        if (oname != null ? !oname.equals(that.oname) : that.oname != null) return false;
+
+        return true;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(orderstateid, oname);
+        int result = orderstateid;
+        result = 31 * result + (oname != null ? oname.hashCode() : 0);
+        return result;
     }
 }
