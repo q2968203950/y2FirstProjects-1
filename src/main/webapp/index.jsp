@@ -1,7 +1,17 @@
-<!DOCTYPE html>
+<%--
+  Created by IntelliJ IDEA.
+  User: q7240
+  Date: 2019/8/21
+  Time: 17:10
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <html>
 
 <head>
+    <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+    <%@taglib prefix="s" uri="/struts-tags" %>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>WBG物流管理系统</title>
@@ -42,7 +52,7 @@
             </li>
             <li class="layui-nav-item">
                 <a href="javascript:;">
-                    <img src="img/psb.jpg" class="layui-nav-img"> WBG
+                    <img src="img/psb.jpg" class="layui-nav-img">${username}
                 </a>
                 <dl class="layui-nav-child">
                     <dd><a href="javascript:;" kit-target
@@ -242,7 +252,7 @@
         <!-- 底部固定区域 -->
         2018 &copy;
         <a href="http://kit.zhengjinfan.cn/">WBG物流管理系统</a>
-       <!-- <marquee>WBG物流管理系统</marquee>-->
+        <!-- <marquee>WBG物流管理系统</marquee>-->
     </div>
 </div>
 <!-- <script type="text/javascript">
