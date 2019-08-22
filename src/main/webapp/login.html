@@ -137,15 +137,14 @@
                 });
                 flag = true;
             }
-            //
-            //     if(flag){
-            //         return true;
-            //     }else{//登录
-            //         //调用后台登录验证的方法
-            //
-            //         return true;
-            //     }
-            // }
+
+                // if(flag){
+                //     return false;
+                // }else{//登录
+                //     //调用后台登录验证的方法
+                //     return false;
+                // }
+            }
 
             //注册
             function register() {
@@ -404,7 +403,7 @@
                 <div class="form-actions">
                     <a tabindex="4" class="btn pull-left btn-link text-muted" onClick="goto_forget()">忘记密码?</a>
                     <a tabindex="5" class="btn btn-link text-muted" onClick="goto_register()">注册</a>
-                    <input class="btn btn-primary" type="button" tabindex="3" onClick="login()" value="登录"
+                    <input class="btn btn-primary" type="submit" tabindex="3" onClick="login()" value="登录"
                            style="color:white;"/>
                 </div>
             </form>
@@ -500,7 +499,7 @@
                 </div>
                 <div class="form-actions">
                     <a class="btn pull-left btn-link text-muted" onClick="goto_login()">返回登录</a>
-                    <input class="btn btn-primary" type="button" onClick="register()" value="注册"
+                    <input class="btn btn-primary" type="submit" onClick="register()" value="注册"
                            style="color:white;"/>
                 </div>
             </form>

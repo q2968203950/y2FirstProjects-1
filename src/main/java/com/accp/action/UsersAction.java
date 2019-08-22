@@ -11,7 +11,7 @@ import java.io.IOException;
 
 public class UsersAction extends ActionSupport {
     //重定向
-    private HttpServletResponse response = ServletActionContext.getResponse();
+    private HttpServletResponse response ;
 
     public HttpServletResponse getResponse() {
         return response;
@@ -38,9 +38,9 @@ public class UsersAction extends ActionSupport {
     }
 
     //转发
-    private HttpServletRequest request = ServletActionContext.getRequest();
+    private HttpServletRequest request ;
     //会话
-    private HttpSession session = request.getSession();
+    private HttpSession session ;
     private UsersService usersService;
     private String username;
     private String password;
@@ -78,7 +78,6 @@ public class UsersAction extends ActionSupport {
         System.out.println(bool);
         System.out.println(username+""+password);
         if(bool){
-            session.setAttribute("username",username);
             return "success";
         }
         return "error";
