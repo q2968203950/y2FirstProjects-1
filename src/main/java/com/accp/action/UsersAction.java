@@ -96,6 +96,5 @@ public class UsersAction extends ActionSupport {
         HttpSession session = request.getSession();
         session.invalidate();
         response.sendRedirect("login.html");
-
     }
 }

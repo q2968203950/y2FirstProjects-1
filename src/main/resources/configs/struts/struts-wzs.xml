@@ -41,5 +41,6 @@
             <!--<interceptor-ref name="defaultStack" />-->
         </action>
         <action name="sessionInvalidate" class="usersAction" method="sessionInvalidate"></action>
+        <action name=""></action>
     </package>
 </struts>
