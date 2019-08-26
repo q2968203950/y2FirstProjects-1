@@ -11,12 +11,12 @@ import javax.servlet.http.HttpServletRequest;
 public class LoginInterceptor implements Interceptor {
     @Override
     public void destroy() {
-
+        System.out.println("销毁方法");
     }
 
     @Override
     public void init() {
-
+        System.out.println("初始化方法");
     }
 
     @Override
@@ -25,8 +25,9 @@ public class LoginInterceptor implements Interceptor {
         Object  myAction = actionInvocation.getAction();
         System.out.println("登录方法");
         if(myAction instanceof UsersAction){
+            System.out.println("登录成功");
+            System.out.println("放行");
             return actionInvocation.invoke();
-
         }else{
             String username = (String) ServletActionContext.getRequest().getSession().getAttribute("username");
             System.out.println(username);

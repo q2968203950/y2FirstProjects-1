@@ -16,6 +16,11 @@ public class Users {
     public Users() {
     }
 
+    public Users(String username, String passowrd) {
+        this.username = username;
+        this.passowrd = passowrd;
+    }
+
     public Users(int userid, String username, String passowrd, Integer powerid, Integer deliveryspotid, int empid) {
         this.userid = userid;
         this.username = username;

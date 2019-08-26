@@ -61,7 +61,7 @@
                     <dd><a href="javascript:;">安全设置</a></dd>
                 </dl>
             </li>
-            <li class="layui-nav-item"><a href="login.html"><i class="fa fa-sign-out" aria-hidden="true"></i> 注销</a>
+            <li class="layui-nav-item"><a href="login.html" onclick='document.location="sessionInvalidate"'><i class="fa fa-sign-out" aria-hidden="true"></i> 注销</a>
             </li>
         </ul>
     </div>
