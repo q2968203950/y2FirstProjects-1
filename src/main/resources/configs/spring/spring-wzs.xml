@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       <!--UserDao 配置-->
+    <bean id="usersDao" class="com.accp.dao.impl.UsersDaoImpl">
+
+            <property name="hibernateTemplate" ref="trMagger"></property>
+        </bean>
+    <bean id="usersService" class="com.accp.service.impl.UsersServiceImpl">
+        <property name="usersDao" ref="usersDao"></property>
+    </bean>
+    <bean id="usersAction" class="com.accp.action.UsersAction">
+        <property name="usersService" ref="usersService"></property>
+    </bean>
+    <!--LineDao 的配置-->
+    <bean id="lineAction" class="com.accp.action.LineAction">
+        <property name="lineService" ref=""
+    </bean>
+
+</beans>
