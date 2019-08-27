@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+    <package name="Users" extends="struts-default">
+        <!--配置自定义的拦截器-->
+        <interceptors>
+            <!--interceptor 可以配置多个
+            name 表示 当前拦截器的名称 唯一的
+            class 拦截器的全路径[包名+类名]
+            使用自定义拦截器 也需要 在action中进行引入-->
+            <interceptor name="loginInterceptor" class="com.accp.interceptor.LoginInterceptor">
+            </interceptor>
+            <!--拦截器栈 声明一个拦截器栈 可以放入多个拦截器
+            interceptor-stack name 唯一-->
+            <interceptor-stack name="myStack">
+                <!--引用拦截器-->
+                <!--自定义的-->
+                <interceptor-ref name="loginInterceptor"></interceptor-ref>
+                <!--还需要引入struts默认的拦截器-->
+                <interceptor-ref name="defaultStack"></interceptor-ref>
+            </interceptor-stack>
+            <interceptor-stack name="excludeParamsStack">
+                <interceptor-ref name="defaultStack">
+                </interceptor-ref>
+            </interceptor-stack>
+        </interceptors>
+        <!--当前包下所有action 都执行 自定义的拦截器
+            如果有多个拦截器 就引用对应的拦截器栈-->
+        <default-interceptor-ref name="myStack"></default-interceptor-ref>
+        <!--全局错误试图-->
+        <global-results>
+            <result name="login">/login.html</result>
+        </global-results>
+        <!--登录操作的Action-->
+        <action name="login" class="usersAction">
+            <result>/index.jsp</result>
+            <result name="error">/login.html</result>
+            <!--<interceptor-ref name="loginInterceptor"></interceptor-ref>-->
+            <!--<interceptor-ref name="defaultStack" />-->
+        </action>
+        <action name="sessionInvalidate" class="usersAction" method="sessionInvalidate"></action>
+        <action name=""></action>
+    </package>
+</struts>
