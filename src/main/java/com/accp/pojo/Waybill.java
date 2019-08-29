@@ -130,4 +130,19 @@ public class Waybill {
         result = 31 * result + deliveryspotid;
         return result;
     }
+
+    public Waybill() {
+    }
+
+    public Waybill(int orderid, BigDecimal totalprice, BigDecimal insureprice, BigDecimal goodsprice, BigDecimal volume, BigDecimal weight, String remark, Date createtime, int deliveryspotid) {
+        this.orderid = orderid;
+        this.totalprice = totalprice;
+        this.insureprice = insureprice;
+        this.goodsprice = goodsprice;
+        this.volume = volume;
+        this.weight = weight;
+        this.remark = remark;
+        this.createtime = createtime;
+        this.deliveryspotid = deliveryspotid;
+    }
 }
