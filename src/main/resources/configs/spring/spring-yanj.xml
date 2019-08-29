@@ -2,13 +2,78 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-    <!--<bean id="userDao" class="com.accp.dao.impl.UserDaoImpl">-->
-        <!--<property name="hibernateTemplate" ref="trMagger"></property>-->
-    <!--</bean>-->
-    <!--<bean id="userService" class="com.accp.service.impl.UserServiceImpl">-->
-        <!--<property name="userDao" ref="userDao"></property>-->
-    <!--</bean>-->
-    <!--<bean id="userAction" class="com.accp.action.UserAction">-->
-        <!--<property name="userService" ref="userService"></property>-->
-    <!--</bean>-->
+    <bean id="cityDao" class="com.accp.dao.impl.CityDaoImpl">
+        <property name="hibernateTemplate" ref="trMagger"></property>
+    </bean>
+    <bean id="cityService" class="com.accp.service.impl.CityServiceImpl">
+        <property name="cityDao" ref="cityDao"></property>
+    </bean>
+    <bean id="cityAction" class="com.accp.action.CityAction">
+        <property name="cityService" ref="cityService"></property>
+    </bean>
+
+    <bean id="deliveryspotDao" class="com.accp.dao.impl.DeliveryspotDaoImpl">
+        <property name="hibernateTemplate" ref="trMagger"></property>
+    </bean>
+    <bean id="deliveryspotService" class="com.accp.service.impl.DeliveryspotServiceImpl">
+        <property name="deliveryspotDao" ref="deliveryspotDao"></property>
+    </bean>
+    <bean id="deliveryspotAction" class="com.accp.action.DeliveryspotAction">
+        <property name="deliveryspotService" ref="deliveryspotService"></property>
+    </bean>
+    <bean id="employeeDao" class="com.accp.dao.impl.EmployeeDaoImpl">
+        <property name="hibernateTemplate" ref="trMagger"></property>
+    </bean>
+    <bean id="employeeService" class="com.accp.service.impl.EmployeeServiceImpl">
+        <property name="employeeDao" ref="employeeDao"></property>
+    </bean>
+    <bean id="employeeAction" class="com.accp.action.EmployeeAction">
+        <property name="employeeService" ref="employeeService"></property>
+    </bean>
+    <bean id="positionsDao" class="com.accp.dao.impl.PositionsDaoImpl">
+        <property name="hibernateTemplate" ref="trMagger"></property>
+    </bean>
+    <bean id="positionsService" class="com.accp.service.impl.PositionsServiceImpl">
+        <property name="positionsDao" ref="positionsDao"></property>
+    </bean>
+    <bean id="positionsAction" class="com.accp.action.PositionsAction">
+        <property name="positionsService" ref="positionsService"></property>
+    </bean>
+    <bean id="userPowDao" class="com.accp.dao.impl.UserPowDaoImpl">
+        <property name="hibernateTemplate" ref="trMagger"></property>
+    </bean>
+    <bean id="userPowService" class="com.accp.service.impl.UserPowServiceImpl">
+        <property name="userPowDao" ref="userPowDao"></property>
+    </bean>
+    <bean id="userPowAction" class="com.accp.action.UserPowAction">
+        <property name="userPowService" ref="userPowService"></property>
+    </bean>
+    <bean id="powerDao" class="com.accp.dao.impl.PowerDaoImpl">
+        <property name="hibernateTemplate" ref="trMagger"></property>
+    </bean>
+    <bean id="powerService" class="com.accp.service.impl.PowerServiceImpl">
+        <property name="powerDao" ref="powerDao"></property>
+    </bean>
+    <bean id="powerAction" class="com.accp.action.PowerAction">
+        <property name="powerService" ref="powerService"></property>
+    </bean>
+    <bean id="ordersDao" class="com.accp.dao.impl.OrdersDaoImpl">
+        <property name="hibernateTemplate" ref="trMagger"></property>
+    </bean>
+    <bean id="ordersService" class="com.accp.service.impl.OrdersServiceImpl">
+        <property name="ordersDao" ref="ordersDao"></property>
+        <property name="deliveryspotDao" ref="deliveryspotDao"></property>
+    </bean>
+    <bean id="ordersAction" class="com.accp.action.OrdersAction">
+        <property name="ordersService" ref="ordersService"></property>
+    </bean>
+    <bean id="receiptDao" class="com.accp.dao.impl.ReceiptDaoImpl">
+        <property name="hibernateTemplate" ref="trMagger"></property>
+    </bean>
+    <bean id="receiptService" class="com.accp.service.impl.ReceiptServiceImpl">
+        <property name="receiptDao" ref="receiptDao"></property>
+    </bean>
+    <bean id="receiptAction" class="com.accp.action.ReceiptAction">
+        <property name="receiptService" ref="receiptService"></property>
+    </bean>
 </beans>

@@ -6,9 +6,21 @@
 
 <struts>
     <package name="yanj" namespace="/" extends="struts-default">
-        <!--<action name="user_*" class="userAction" method="{1}">-->
-            <!--<result>main.jsp</result>-->
-            <!--<result name="input">index.jsp</result>-->
-        <!--</action>-->
+        <action name="city_*" class="cityAction" method="{1}">
+        </action>
+        <action name="del_*" class="deliveryspotAction" method="{1}">
+        </action>
+        <action name="emp_*" class="employeeAction" method="{1}">
+        </action>
+        <action name="pos_*" class="positionsAction" method="{1}">
+        </action>
+        <action name="use_*" class="userPowAction" method="{1}">
+        </action>
+        <action name="pow_*" class="powerAction" method="{1}">
+        </action>
+        <action name="ord_*" class="ordersAction" method="{1}">
+        </action>
+        <action name="rec_*" class="receiptAction" method="{1}">
+        </action>
     </package>
 </struts>

@@ -75,22 +75,10 @@
                     <a class="" href="javascript:;"><i class="fa fa-plug" aria-hidden="true"></i><span> 用户管理</span></a>
                     <dl class="layui-nav-child">
                         <dd>
-                            <a href="javascript:;" kit-target
-                               data-options="{url:'mains.jsp',icon:'&#xe6c6;',title:'公司结构',id:'1'}">
-                                <i class="layui-icon">&#xe6c6;</i><span> 权限管理</span></a>
-                        </dd>
-                        <dd>
-                            <a href="javascript:;" data-url="employee.jsp" data-icon="fa-user" data-title="添加用户" kit-target
+                            <a href="javascript:;" data-url="usersPow.jsp" data-icon="fa-user" data-title="查询用户信息"
+                               kit-target
                                data-id='2'>
-                                <i class="fa fa-user" aria-hidden="true"></i><span> 添加用户</span></a>
-                        </dd>
-                        <dd>
-                            <a href="javascript:;" data-url="/depart" data-icon="&#xe614;" data-title="修改用户信息"
-                               kit-target data-id='3'><i class="layui-icon">&#xe614;</i><span> 修改用户信息</span></a>
-                        </dd>
-                        <dd>
-                            <a href="javascript:;" data-url="/depart" data-icon="&#xe614;" data-title="删除用户"
-                               kit-target data-id='4'><i class="layui-icon">&#xe614;</i><span> 删除用户</span></a>
+                                <i class="fa fa-user" aria-hidden="true"></i><span> 查询用户信息</span></a>
                         </dd>
                     </dl>
                 </li>
@@ -98,20 +86,14 @@
                     <a href="javascript:;"><i class="fa fa-user" aria-hidden="false"></i><span> 员工管理</span></a>
                     <dl class="layui-nav-child">
                         <dd>
-                            <a href="javascript:;" data-url="vehicle.jsp" data-icon="fa-user" data-title="添加员工信息" kit-target
+                            <a href="javascript:;" data-url="employee.jsp" data-icon="fa-user" data-title="查看员工信息"
+                               kit-target
                                data-id='5'>
-                                <i class="fa fa-user" aria-hidden="true"></i><span> 添加员工信息</span></a>
+                                <i class="fa fa-user" aria-hidden="true"></i><span> 查看员工信息</span></a>
                         </dd>
                         <dd>
-                            <a href="javascript:;" data-url="/vehicle" data-icon="&#xe614;" data-title="员工信息修改"
-                               kit-target data-id='6'><i class="layui-icon">&#xe614;</i><span> 员工信息修改</span></a>
-                        </dd>
-                        <dd>
-                            <a href="javascript:;" data-url="/vehicle" data-icon="&#xe614;" data-title="员工信息查看"
-                               kit-target data-id='7'><i class="layui-icon">&#xe614;</i><span> 员工信息查看</span></a>
-                        </dd>
-                        <dd>
-                            <a href="javascript:;" data-url="/vehicle" data-icon="&#xe614;" data-title="员工离职(加入历史记录)"
+                            <a href="javascript:;" data-url="employee_history.jsp" data-icon="&#xe614;"
+                               data-title="员工离职(加入历史记录)"
                                kit-target data-id='8'><i class="layui-icon">&#xe614;</i><span> 员工离职(加入历史记录)</span></a>
                         </dd>
                     </dl>
@@ -120,7 +102,8 @@
                     <a href="javascript:;"><i class="fa fa-plug" aria-hidden="true"></i><span> 车辆管理</span></a>
                     <dl class="layui-nav-child">
                         <dd>
-                            <a href="javascript:;" data-url="route.jsp" data-icon="fa-user" data-title="新购车辆登记" kit-target
+                            <a href="javascript:;" data-url="route.jsp" data-icon="fa-user" data-title="新购车辆登记"
+                               kit-target
                                data-id='9'>
                                 <i class="fa fa-user" aria-hidden="true"></i><span> 新购车辆登记</span></a>
                         </dd>
@@ -138,25 +121,10 @@
                     <a href="javascript:;"><i class="fa fa-plug" aria-hidden="true"></i><span> 配送点管理</span></a>
                     <dl class="layui-nav-child">
                         <dd>
-                            <a href="javascript:;" data-url="waybill.jsp" data-icon="fa-user" data-title="新增配送点" kit-target
+                            <a href="javascript:;" data-url="deliveryspot.jsp" data-icon="fa-user" data-title="查看配送点信息"
+                               kit-target
                                data-id='12'>
-                                <i class="fa fa-user" aria-hidden="true"></i><span> 新增配送点</span></a>
-                        </dd>
-                        <dd>
-                            <a href="javascript:;" data-url="/waybill" data-icon="&#xe628;" data-title="查看配送点" kit-target
-                               data-id='13'><i class="layui-icon">&#xe628;</i><span> 查看配送点</span></a>
-                        </dd>
-                        <dd>
-                            <a href="javascript:;" data-url="/positions" data-icon="&#xe614;" data-title="修改配送点信息"
-                               kit-target data-id='14'><i class="layui-icon">&#xe614;</i><span> 修改配送点信息</span></a>
-                        </dd>
-                        <dd>
-                            <a href="javascript:;" data-url="/positions" data-icon="&#xe614;" data-title="删除配送点"
-                               kit-target data-id='15'><i class="layui-icon">&#xe614;</i><span> 删除配送点</span></a>
-                        </dd>
-                        <dd>
-                            <a href="javascript:;" data-url="/positions" data-icon="&#xe614;" data-title="配送价格管理"
-                               kit-target data-id='16'><i class="layui-icon">&#xe614;</i><span> 配送价格管理</span></a>
+                                <i class="fa fa-user" aria-hidden="true"></i><span> 查看配送点信息</span></a>
                         </dd>
                     </dl>
                 </li>
@@ -164,7 +132,8 @@
                     <a href="javascript:;"><i class="fa fa-plug" aria-hidden="true"></i><span>线路管理</span></a>
                     <dl class="layui-nav-child">
                         <dd>
-                            <a href="javascript:;" data-url="form.html" data-icon="fa-user" data-title="配送点线路分配" kit-target
+                            <a href="javascript:;" data-url="form.html" data-icon="fa-user" data-title="配送点线路分配"
+                               kit-target
                                data-id='17'>
                                 <i class="fa fa-user" aria-hidden="true"></i><span> 配送点线路分配</span></a>
                         </dd>
@@ -182,21 +151,10 @@
                     <a href="javascript:;"><i class="fa fa-plug" aria-hidden="true"></i><span>订单管理</span></a>
                     <dl class="layui-nav-child">
                         <dd>
-                            <a href="javascript:;" data-url="form.html" data-icon="fa-user" data-title="接收订单" kit-target
+                            <a href="javascript:;" data-url="orders.jsp" data-icon="fa-user" data-title="查看订单信息"
+                               kit-target
                                data-id='20'>
-                                <i class="fa fa-user" aria-hidden="true"></i><span> 接收订单</span></a>
-                        </dd>
-                        <dd>
-                            <a href="javascript:;" data-url="nav.html" data-icon="&#xe628;" data-title="更改订单状态" kit-target
-                               data-id='21'><i class="layui-icon">&#xe628;</i><span> 更改订单状态</span></a>
-                        </dd>
-                        <dd>
-                            <a href="javascript:;" data-url="list4.html" data-icon="&#xe614;" data-title="按订单号查询订单"
-                               kit-target data-id='22'><i class="layui-icon">&#xe614;</i><span> 按订单号查询订单</span></a>
-                        </dd>
-                        <dd>
-                            <a href="javascript:;" data-url="nav.html" data-icon="&#xe628;" data-title="删除订单" kit-target
-                               data-id='23'><i class="layui-icon">&#xe628;</i><span> 删除订单</span></a>
+                                <i class="fa fa-user" aria-hidden="true"></i><span> 查看订单信息</span></a>
                         </dd>
                         <dd>
                             <a href="javascript:;" data-url="list4.html" data-icon="&#xe614;" data-title="交接单管理"
@@ -217,27 +175,28 @@
                                data-options="{url:'onelevel.html',icon:'&#xe658;',title:'OneLevel',id:'50'}"><i
                                 class="layui-icon">&#xe658;</i><span> OneLevel</span></a></dd>
                         <dd><a href="javascript:;" kit-target
-                               data-options="{url:'app.html',icon:'&#xe658;',title:'App',id:'8'}"><i class="layui-icon">&#x<li class="layui-nav-item">-->
-                <!--<a href="javascript:;"><i class="fa fa-plug" aria-hidden="true"></i><span> 权限分配</span></a>-->
-                <!--<dl class="layui-nav-child">-->
-                <!--<dd><a href="javascript:;" kit-target-->
-                <!--data-options="{url:'navbar.html',icon:'&#xe658;',title:'Navbar',id:'6'}"><i-->
-                <!--class="layui-icon">&#xe658;</i><span> Navbar</span></a></dd>-->
-                <!--<dd><a href="javascript:;" kit-target-->
-                <!--data-options="{url:'tab.html',icon:'&#xe658;',title:'TAB',id:'7'}"><i class="layui-icon">&#xe658;</i><span> Tab</span></a>-->
-                <!--</dd>-->
-                <!--<dd><a href="javascript:;" kit-target-->
-                <!--data-options="{url:'onelevel.html',icon:'&#xe658;',title:'OneLevel',id:'50'}"><i-->
-                <!--class="layui-icon">&#xe658;</i><span> OneLevel</span></a></dd>-->
-                <!--<dd><a href="javascript:;" kit-target-->
-                <!--data-options="{url:'app.html',icon:'&#xe658;',title:'App',id:'8'}"><i class="layui-icon">&#xe658;</i><span> app.js主入口</span></a>-->
-                <!--</dd>-->
-                <!--</dl>-->
-                <!--</li>e658;</i><span> app.js主入口</span></a>
-                        </dd>
-                    </dl>
-                </li>
-                <!---->
+                               data-options="{url:'app.html',icon:'&#xe658;',title:'App',id:'8'}"><i class="layui-icon">&#x
+                <li class="layui-nav-item">-->
+                    <!--<a href="javascript:;"><i class="fa fa-plug" aria-hidden="true"></i><span> 权限分配</span></a>-->
+                    <!--<dl class="layui-nav-child">-->
+                    <!--<dd><a href="javascript:;" kit-target-->
+                    <!--data-options="{url:'navbar.html',icon:'&#xe658;',title:'Navbar',id:'6'}"><i-->
+                    <!--class="layui-icon">&#xe658;</i><span> Navbar</span></a></dd>-->
+                    <!--<dd><a href="javascript:;" kit-target-->
+                    <!--data-options="{url:'tab.html',icon:'&#xe658;',title:'TAB',id:'7'}"><i class="layui-icon">&#xe658;</i><span> Tab</span></a>-->
+                    <!--</dd>-->
+                    <!--<dd><a href="javascript:;" kit-target-->
+                    <!--data-options="{url:'onelevel.html',icon:'&#xe658;',title:'OneLevel',id:'50'}"><i-->
+                    <!--class="layui-icon">&#xe658;</i><span> OneLevel</span></a></dd>-->
+                    <!--<dd><a href="javascript:;" kit-target-->
+                    <!--data-options="{url:'app.html',icon:'&#xe658;',title:'App',id:'8'}"><i class="layui-icon">&#xe658;</i><span> app.js主入口</span></a>-->
+                    <!--</dd>-->
+                    <!--</dl>-->
+                    <!--</li>e658;</i><span> app.js主入口</span></a>
+                            </dd>
+                        </dl>
+                    </li>
+                    <!---->
             </ul>
         </div>
     </div>
