@@ -165,4 +165,22 @@ public class Orders {
         result = 31 * result + orderstateid;
         return result;
     }
+
+    public Orders() {
+    }
+
+    public Orders(String orderno, String sendname, String sendaddress, String sendtel, String sendmobtle, String sendpostcode, String receivename, String receiveaddress, String receivetel, String receivemodile, String receivepostcode, int orderstateid) {
+        this.orderno = orderno;
+        this.sendname = sendname;
+        this.sendaddress = sendaddress;
+        this.sendtel = sendtel;
+        this.sendmobtle = sendmobtle;
+        this.sendpostcode = sendpostcode;
+        this.receivename = receivename;
+        this.receiveaddress = receiveaddress;
+        this.receivetel = receivetel;
+        this.receivemodile = receivemodile;
+        this.receivepostcode = receivepostcode;
+        this.orderstateid = orderstateid;
+    }
 }

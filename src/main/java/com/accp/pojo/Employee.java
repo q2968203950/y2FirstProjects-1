@@ -1,5 +1,7 @@
 package com.accp.pojo;
 
+import com.alibaba.fastjson.annotation.JSONField;
+
 import java.math.BigDecimal;
 import java.sql.Date;
 
@@ -8,9 +10,11 @@ public class Employee {
     private String empno;
     private String ename;
     private int genoer;
+    @JSONField(format = "yyyy-MM-hh")
     private Date birthday;
     private String address;
     private String tel;
+    @JSONField(format = "yyyy-MM-hh")
     private Date startwordtime;
     private BigDecimal salary;
     private String email;
@@ -174,5 +178,25 @@ public class Employee {
         result = 31 * result + deliveryspotid;
         result = 31 * result + flag;
         return result;
+    }
+
+    public Employee() {
+    }
+
+    public Employee(int empid, String empno, String ename, int genoer, Date birthday, String address, String tel, Date startwordtime, BigDecimal salary, String email, String cardid, int psoitionid, int deliveryspotid, int flag) {
+        this.empid = empid;
+        this.empno = empno;
+        this.ename = ename;
+        this.genoer = genoer;
+        this.birthday = birthday;
+        this.address = address;
+        this.tel = tel;
+        this.startwordtime = startwordtime;
+        this.salary = salary;
+        this.email = email;
+        this.cardid = cardid;
+        this.psoitionid = psoitionid;
+        this.deliveryspotid = deliveryspotid;
+        this.flag = flag;
     }
 }

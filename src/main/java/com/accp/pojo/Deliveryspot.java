@@ -177,4 +177,24 @@ public class Deliveryspot {
         result = 31 * result + (secondvdlumeprice != null ? secondvdlumeprice.hashCode() : 0);
         return result;
     }
+
+    public Deliveryspot() {
+    }
+
+    public Deliveryspot(int deliveryspotid, String deliveryspotno, String dname, int provinceid, int cityid, int empid, String tel, BigDecimal startscope, BigDecimal startprice, BigDecimal secondprice, int flag, BigDecimal startvolumescope, BigDecimal startvolumeprice, BigDecimal secondvdlumeprice) {
+        this.deliveryspotid = deliveryspotid;
+        this.deliveryspotno = deliveryspotno;
+        this.dname = dname;
+        this.provinceid = provinceid;
+        this.cityid = cityid;
+        this.empid = empid;
+        this.tel = tel;
+        this.startscope = startscope;
+        this.startprice = startprice;
+        this.secondprice = secondprice;
+        this.flag = flag;
+        this.startvolumescope = startvolumescope;
+        this.startvolumeprice = startvolumeprice;
+        this.secondvdlumeprice = secondvdlumeprice;
+    }
 }

@@ -13,6 +13,23 @@ public class Users {
         return userid;
     }
 
+    public Users() {
+    }
+
+    public Users(String username, String passowrd) {
+        this.username = username;
+        this.passowrd = passowrd;
+    }
+
+    public Users(int userid, String username, String passowrd, Integer powerid, Integer deliveryspotid, int empid) {
+        this.userid = userid;
+        this.username = username;
+        this.passowrd = passowrd;
+        this.powerid = powerid;
+        this.deliveryspotid = deliveryspotid;
+        this.empid = empid;
+    }
+
     public void setUserid(int userid) {
         this.userid = userid;
     }
@@ -84,5 +101,17 @@ public class Users {
         result = 31 * result + (deliveryspotid != null ? deliveryspotid.hashCode() : 0);
         result = 31 * result + empid;
         return result;
+    }
+
+    public Users() {
+    }
+
+    public Users(int userid, String username, String passowrd, Integer powerid, Integer deliveryspotid, int empid) {
+        this.userid = userid;
+        this.username = username;
+        this.passowrd = passowrd;
+        this.powerid = powerid;
+        this.deliveryspotid = deliveryspotid;
+        this.empid = empid;
     }
 }
